@@ -8,7 +8,7 @@ const MainApp = (props) => {
     <Router>
       <header id="header-container">
         <h1 id="header-title">leCafé</h1>
-        <img/> // FINN ET BILDE 
+        <img/> {/* FINN ET BILDE */}
       </header>
       <Link to="/MainMenu">Main Menu</Link>
       <Link to="/MainPage"></Link>

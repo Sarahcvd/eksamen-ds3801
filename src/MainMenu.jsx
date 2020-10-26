@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Beverage from './Beverage';
 import Dessert from './Dessert';
 import {warmBeverages, coldBeverages, desserts} from './productList';
+import './styles.css';
 
 const MainMenu = () => {
     const menuCategoryNames = ["Varm drikke", "Kald drikke", "Dessert"];
@@ -33,7 +34,7 @@ const MainMenu = () => {
                     price={dessert.price}
                 />))
         }
-    },[menuCategory])
+    },[menuCategory]);
 
     return(
         <div>

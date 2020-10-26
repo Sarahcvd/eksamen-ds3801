@@ -2,14 +2,14 @@ import React from 'react';
 
 const MainPage = () =>{
     return(
-        <div id="main-page-container">
-            <div class="categories-div">
+        <div className="main-page-container">
+            <div id="hot-cat">
                 <h1>Varme Drikker</h1>
             </div>
-            <div class="categories-div">
+            <div id="cold-cat">
                 <h1>Kalde Drikker</h1>
             </div>
-            <div class="categories-div">
+            <div id="dess-cat">
                 <h1>Desserter</h1>
             </div>
         </div>
