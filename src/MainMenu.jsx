@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Beverage from './Beverage';
 import Dessert from './Dessert';
 import {warmBeverages, coldBeverages, desserts} from './productList';
-import './styles.css';
+import './styles.css'; 
 
 const MainMenu = () => {
     const menuCategoryNames = ["Varm drikke", "Kald drikke", "Dessert"];
@@ -37,25 +37,28 @@ const MainMenu = () => {
     },[menuCategory]);
 
     return(
-        <div>
-            <div>
-                <button
+        <div id="product-list-container">
+            <div id="nav-bar-container">
+                <div
+                    id="hot-category"
                     className={`menu-category-button ${menuCategory === menuCategoryNames[0] ? "active-button" : ""}`}
                     onclick={() => setMenuCategory(menuCategoryNames[0])}>
                     {menuCategoryNames[0]}
-                </button>
-                <button
+                </div>
+                <div
+                    id="cold-category"
                     className={`menu-category-button ${menuCategory === menuCategoryNames[1] ? "active-button" : ""}`}
                     onclick={() => setMenuCategory(menuCategoryNames[1])}>
                     {menuCategoryNames[1]}
-                </button>
-                <button
+                </div>
+                <div
+                    id="desserts-category"
                     className={`menu-category-button ${menuCategory === menuCategoryNames[2] ? "active-button" : ""}`}
                     onclick={() => setMenuCategory(menuCategoryNames[2])}>
                     {menuCategoryNames[2]}
-                </button>
+                </div>
             </div>
-            <div>
+            <div id="product-container">
                 <div className="menu-item-container">
                     {menuItems.map(item =>{
                             return<>{item}</>

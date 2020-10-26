@@ -1,14 +1,15 @@
+*{
+    font-family: "Helvetica Neue";
+}
 body{
     background-color: #F7F8F7;
-    /*font-size: 50px;*/
     margin: 0 auto;
 }
 
 /* MAIN CONTAINER */
-
 #root {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
     grid-gap: 10px;
     margin: 10x;
@@ -17,20 +18,169 @@ body{
 /* MENU */
 
 #header-container{
-    border: 1px solid #B37A7A;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 50px;
     width: 100%;
-    border-radius: 15px;
     padding: 2%;
     grid-column-start: 1;
     grid-column-end: 4;
 }
 
-.main-page-container{
-    grid-row: 2;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+/*
+#menu-icon{
+    height: 50px;
+    margin-top: 15px;
+    margin-left: 55px;
+    grid-column: 1 / span 1;
+}*/
+
+#header-title{
+    text-align: center;
+    grid-column: 2 / span 1;
 }
-.main-page-container h1{
+
+/*
+.cart {
+    grid-column: 3 / span 1;
+    position: absolute;
+}
+.cart, img{
+    height: 50px;
+    margin-top: 15px;
+    left: 15px;
+    text-align: end;
+    position: relative;
+    left: -25px;
+}*/
+
+/* CATEGORIES */
+
+.main-page-container{
+    grid-row: 3;
+}
+
+/* Hot Drinks */
+#hot-drinks-container {
+    border-radius: 15px;
+    width: 330px;
+    height: 200px;
+    color: white;
+    background-color: white;
+    padding: 5px;
+    margin: 15px;
+    background-image: url("./images/varmeDrikker.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-column: 1 / span 3;
+    grid-row: 2;
+}
+
+#hot-drinks-title{
+    color: black;
+    background-color: #F7F8F7;
+    width: fit-content;
+    border: 2px solid rgb(63, 63, 63);
+    padding: 0px 10px 0px 10px;
+}
+
+/* Cold Drinks */
+
+#cold-drinks-container{
+    border-radius: 15px;
+    width: auto;
+    width: 330px;
+    height: 200px;
+    color: white;
+    background-color: white;
+    padding: 5px;
+    margin: 15px;
+    background-image: url("./images/kaldeDrikker.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-column: 1 / span 3;
+    grid-row: 3;
+}
+
+#cold-drinks-title{
+    color: black;
+    background-color: #F7F8F7;
+    width: fit-content;
+    border: 2px solid rgb(63, 63, 63);
+    padding: 0px 10px 0px 10px;
+}
+
+/* Desserts */
+
+#desserts-container{
+    border-radius: 15px;
+    width: auto;
+    width: 330px;
+    height: 200px;
+    color: white;
+    background-color: white;
+    padding: 5px;
+    margin: 15px;
+    background-image: url("./images/desserter.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-column: 1 / span 3;
+    grid-row: 4;
+}
+
+#desserts-title{
+    color: black;
+    background-color: #F7F8F7;
+    width: fit-content;
+    border: 2px solid rgb(63, 63, 63);
+    padding: 0px 10px 0px 10px;
+}
+
+/* Pastries 
+
+#pastry-container{
+    border-radius: 15px;
+    width: auto;
+    height: 400px;
+    color: white;
+    background-color: white;
+    padding: 5px;
+    margin: 15px;
+    background-image: url("../images/pastries.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-column: 1 / span 3;
+    grid-row: 5;
+}
+
+#pastry-title{
+    color: black;
+    background-color: #F7F8F7;
+    width: fit-content;
+    border: 2px solid rgb(63, 63, 63);
+    padding: 0px 10px 0px 10px;
+}
+*/
+
+/* PRODUCT LIST CONTAINER */
+#product-list-container{
+    grid-row: 3;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+/* NAVIGATION BAR */
+#nav-bar-container{
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.menu-category-button{
     border: 1px solid #B37A7A;
     padding: 5px;
     border-radius: 15px;
@@ -39,17 +189,42 @@ body{
     color: #B37A7A;
 }
 
-#hot-cat {
+#hot-category {
+    grid-row: 1;
     grid-column: 1;
-    background-color: #B37A7A;
+    background-color: #B37A7A;  
     color: white;
-    border-radius: 15px;;
+    border-radius: 15px;
 }
 
-#cold-cat{
+#cold-category{
+    grid-row: 1;
     grid-column: 2;
 }
 
-#dess-cat{
+#desserts-category{
+    grid-row: 1;
     grid-column: 3;
+}
+
+
+/* PRODUCT CONTAINER */
+#product-container{
+    grid-row: 2;
+}
+
+
+/* TOTAL PRICE */
+#total-price-div{
+    grid-row: 3;
+}
+
+
+/* MENU CONTAINER BEVERAGE */
+
+.menu-container-beverage{
+    border: 1px solid #B37A7A; 
+    border-radius: 15px;
+    padding: 5px;
+    margin: 5px;
 }
