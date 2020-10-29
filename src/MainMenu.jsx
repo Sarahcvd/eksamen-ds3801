@@ -1,79 +1,45 @@
-import React, { useState, useEffect } from 'react'
-import Beverage from './Beverage';
-import Dessert from './Dessert';
-import {warmBeverages, coldBeverages, desserts} from './productList';
-import './styles.css'; 
+import React, {useState, useContext} from 'react';
+import {useParams} from 'react-router-dom';
+import '../../semesteroppgave-ds3801/src/style.css';
+import {Desserts} from './Components/Dessert';
+import {WarmDrink} from './Components/WarmDrinks';
+import {ColdDrink} from './Components/ColdDrink';
+import {MenuCategory} from '../../semesteroppgave-ds3801/src/MainCategory';
+import {ShowPrice} from '';
+import {ShoppingCart} from '';
 
-const MainMenu = () => {
-    const menuCategoryNames = ["Varm drikke", "Kald drikke", "Dessert"];
+
+
+const MainMenu=()=>{
+    const menuCategoryName = ['Dessert', 'Warm Drink', 'Cold Drink'];
     let totalPrice = 1;
 
-    const [menuCategory, setMenuCategory] = useState(menuCategoryNames[0]);
-    const [menuItems, setMenuItems] = useState([]);
+    const [menuProduct, setMenuProduct] = useState([]);
+    const [menuCategory, setMenuCategory] = useState(menuCategoryName[0]);
 
-    useEffect(() => {
-        if(menuCategory === menuCategoryNames[0]){
-            setMenuItems(warmBeverages.map(warmBeverage =>
-                <Beverage 
-                    key={warmBeverage.id}
-                    name={warmBeverage.size[0].name}
-                    price={warmBeverage.size[0].price}
-                />))
-        }else if(menuCategory === menuCategoryNames[1]){
-            setMenuItems(coldBeverages.map(coldBeverage  =>
-                <Beverage 
-                    key={coldBeverage.id}
-                    name={coldBeverage.size[1].name}
-                    price={coldBeverage.size[1].price}
-                />))
-        }else if(menuCategory === menuCategoryNames[2]){
-            setMenuItems(desserts.map(dessert =>
-                <Dessert 
-                    key={dessert.id}
-                    name={dessert.name}
-                    price={dessert.price}
-                />))
+    let {area} = useParams();
+
+    const getArea=()=>{
+
+        switch(area){
+            case 'Dessert':
+                return <Desserts/>;
+            case 'Warm Drink':
+                return <WarmDrink/>;
+            case 'Cold Drink':
+                return <ColdDrink/>;   
         }
-    },[menuCategory]);
+
+    };
 
     return(
-        <div id="product-list-container">
-            <div id="nav-bar-container">
-                <div
-                    id="hot-category"
-                    className={`menu-category-button ${menuCategory === menuCategoryNames[0] ? "active-button" : ""}`}
-                    onclick={() => setMenuCategory(menuCategoryNames[0])}>
-                    {menuCategoryNames[0]}
-                </div>
-                <div
-                    id="cold-category"
-                    className={`menu-category-button ${menuCategory === menuCategoryNames[1] ? "active-button" : ""}`}
-                    onclick={() => setMenuCategory(menuCategoryNames[1])}>
-                    {menuCategoryNames[1]}
-                </div>
-                <div
-                    id="desserts-category"
-                    className={`menu-category-button ${menuCategory === menuCategoryNames[2] ? "active-button" : ""}`}
-                    onclick={() => setMenuCategory(menuCategoryNames[2])}>
-                    {menuCategoryNames[2]}
-                </div>
-            </div>
-            <div id="product-container">
-                <div className="menu-item-container">
-                    {menuItems.map(item =>{
-                            return<>{item}</>
-                    })}
-                </div>
-            </div>
-
-            {totalPrice > 0 &&
-            <div id="total-price-div">
-                <div id="total-price-text-div">Totalpris: <b>{totalPrice} kr,-</b></div>
-                <button id="go-to-shopping-cart-button">Gå til handlekurv</button>
-            </div>
-            }
-        </div>
-    )
-}
+        <>
+        <MenuCategory/>
+            {getArea()}
+        <ShowPrice totalPrice={1}/>
+        </>
+    );
+    
+};
 
 export default MainMenu;
