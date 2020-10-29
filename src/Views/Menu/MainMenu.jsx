@@ -7,7 +7,7 @@ import Desserts from './Components/Desserts';
 import {MenuCategory} from './Components/MenuCategory';
 import {ShowPrice} from '../../Categories/ShowPrice';
 import {warmBeverages, coldBeverages, desserts} from '../../productList';
-import './styles.css'; 
+import '../../styles.css'; 
 
 
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import MainMenu from './MainMenu';
-import MainPage from './MainPage';
+import MainMenu from './Menu/MainMenu';
+import MainPage from './MainPage/MainPage';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import {ShoppingCart} from './ShoppingCart';
+import {ShoppingCart} from '../ShoppingCart';
 
 const MainApp = (props) => {
   //useState and props products/setProducts
