@@ -63,7 +63,7 @@ body{
 /* Hot Drinks */
 #hot-drinks-container {
     border-radius: 15px;
-    width: 330px;
+    width: 385px;
     height: 200px;
     color: white;
     background-color: white;
@@ -78,11 +78,11 @@ body{
 }
 
 #hot-drinks-title{
-    color: black;
-    background-color: #F7F8F7;
+    margin-top: 80px;
+    color: white;
     width: fit-content;
-    border: 2px solid rgb(63, 63, 63);
     padding: 0px 10px 0px 10px;
+    font-size: x-large;
 }
 
 /* Cold Drinks */
@@ -90,7 +90,7 @@ body{
 #cold-drinks-container{
     border-radius: 15px;
     width: auto;
-    width: 330px;
+    width: 385px;
     height: 200px;
     color: white;
     background-color: white;
@@ -105,11 +105,11 @@ body{
 }
 
 #cold-drinks-title{
-    color: black;
-    background-color: #F7F8F7;
+    margin-top: 80px;
+    color: white;
     width: fit-content;
-    border: 2px solid rgb(63, 63, 63);
     padding: 0px 10px 0px 10px;
+    font-size: x-large;
 }
 
 /* Desserts */
@@ -117,7 +117,7 @@ body{
 #desserts-container{
     border-radius: 15px;
     width: auto;
-    width: 330px;
+    width: 385px;
     height: 200px;
     color: white;
     background-color: white;
@@ -132,11 +132,11 @@ body{
 }
 
 #desserts-title{
-    color: black;
-    background-color: #F7F8F7;
+    margin-top: 80px;
+    color: white;
     width: fit-content;
-    border: 2px solid rgb(63, 63, 63);
     padding: 0px 10px 0px 10px;
+    font-size: x-large;
 }
 
 /* Pastries 
