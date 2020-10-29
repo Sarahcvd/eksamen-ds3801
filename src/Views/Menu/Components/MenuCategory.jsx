@@ -4,25 +4,25 @@ import {useHistory, useParams} from 'react-router-dom';
 export const MenuCategory=()=>{
     const history = useHistory();
     const {area} = useParams();
-    const menuCategoryName = ['Dessert', 'Warm Drink', 'Cold Drink'];
+    const menuCategoryName = ['Dessert', 'Hot Drink', 'Cold Drink'];
 
     return(
         <div>
             <button
                 className={`menu-category-btn ${area==='Dessert' ? 'active-btn' : ''}`}
-                onClick={()=> history.push('/MainMenu/Dessert')}>
+                onClick={()=> history.push('./MainMenu/Desserts')}>
                 {menuCategoryName[0]}
             </button>
 
             <button
-                className={`menu-category-btn ${area==='WarmDrink' ? 'active-btn' : ''}`}
-                onClick={()=> history.push('/MainMenu/WarmDrink')}>
+                className={`menu-category-btn ${area==='HotDrink' ? 'active-btn' : ''}`}
+                onClick={()=> history.push('./MainMenu/HotDrinks')}>
                 {menuCategoryName[1]}
             </button>
 
             <button
                 className={`menu-category-btn ${area==='ColdDrink' ? 'active-btn' : ''}`}
-                onClick={()=> history.push('/MainMenu/ColdDrink')}>
+                onClick={()=> history.push('./MainMenu/ColdDrinks')}>
                 {menuCategoryName[2]}
             </button>
         </div>

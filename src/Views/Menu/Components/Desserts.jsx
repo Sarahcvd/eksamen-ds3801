@@ -3,7 +3,7 @@ import { desserts } from '../../../productList';
 import Dessert from '../../../Categories/Dessert';
 
 const Desserts = () => {
-  return desserts.map((dessert) => (
+  return desserts.map((desserts) => (
     
     // This component doesnt include choice of size.
     <Dessert

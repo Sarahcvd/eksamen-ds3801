@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Dessert = (props) => {
+const Desserts = (props) => {
     return(
         <div className="menu-coatainer-dessert">
             <div className="dessert-title">{props.name}</div>
@@ -9,4 +9,4 @@ const Dessert = (props) => {
     )
 }
 
-export default Dessert;
+export default Desserts;

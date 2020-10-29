@@ -26,7 +26,7 @@ const MainMenu=()=>{
         switch(area){
             case 'Desserts':
                 return <Desserts/>;
-            case 'Warm Drinks':
+            case 'Hot Drinks':
                 return <HotDrinks/>;
             case 'Cold Drinks':
                 return <ColdDrinks/>;   
