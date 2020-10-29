@@ -1,4 +1,4 @@
-const warmBeverages = [
+const hotDrinks = [
     {
         id: "Filterkaffe",
         size: [
@@ -145,7 +145,7 @@ const warmBeverages = [
     }
 ];
 
-const coldBeverages = [
+const coldDrinks = [
     {
         id: "Iskaffe",
         size: [
@@ -229,4 +229,4 @@ const desserts = [
     }
 ];
 
-export {warmBeverages, coldBeverages, desserts};
+export {hotDrinks, coldDrinks, desserts};

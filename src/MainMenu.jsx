@@ -1,12 +1,10 @@
-import React, {useState, useContext} from 'react';
-import {useParams} from 'react-router-dom';
-import '../../semesteroppgave-ds3801/src/style.css';
-import {Desserts} from './Components/Dessert';
-import {WarmDrink} from './Components/WarmDrinks';
-import {ColdDrink} from './Components/ColdDrink';
-import {MenuCategory} from '../../semesteroppgave-ds3801/src/MainCategory';
-import {ShowPrice} from '';
-import {ShoppingCart} from '';
+
+import React, { useState, useEffect } from 'react'
+import Drink from './Drink';
+import Dessert from './Dessert';
+import {warmBeverages, coldBeverages, desserts} from './productList';
+import './styles.css'; 
+
 
 
 
