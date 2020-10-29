@@ -2,7 +2,7 @@ import React from 'react';
 import { desserts } from '../../../productList';
 import Dessert from '../../../Categories/Dessert';
 
-const Desserts = () => {
+export const Desserts = () => {
   return desserts.map((desserts) => (
     
     // This component doesnt include choice of size.
@@ -13,5 +13,3 @@ const Desserts = () => {
     />
   ));
 };
-
-export default Desserts;
