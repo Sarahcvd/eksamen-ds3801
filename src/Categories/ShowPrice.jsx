@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useState } from 'react';
 import { ShoppingCart } from '../ShoppingCart';
 
-export const PricePreview = (props) => {
+export const ShowPrice = (props) => {
     const shoppingCart = useContext(ShoppingCart); /* Klassen ShoppingCart må opprettes  */
     const [totalPrice, setTotalPrice] = useState(0);
 
@@ -13,7 +13,7 @@ export const PricePreview = (props) => {
     const totalPriceSum = () => {
         let sum = 0;
         console.log('pub', shoppingCart.products);
-        Object.keys(shoppingart.products).forEach((product) => {
+        Object.keys(shoppingCart.products).forEach((product) => {
             console.log('product', shoppingCart.products[product]);
             Object.keys(shoppingCart.products[product]).forEach((size) => {
                 const count = shoppingCart.products[product][size].count;

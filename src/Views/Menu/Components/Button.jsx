@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import './button.css'
+// Denne er ikke brukt ennå
 
 // Props - Arvede variabler eller funskjoner gitt av en forelder klasse/komponent
 const Button = (props) => (
