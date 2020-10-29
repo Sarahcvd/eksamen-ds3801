@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import ColdDrinks from './Components/ColdDrinks';
-import HotDrinks from './Components/HotDrinks';
-import Desserts from './Components/Desserts';
+import {ColdDrinks} from './Components/ColdDrinks';
+import {HotDrinks} from './Components/HotDrinks';
+import {Desserts} from './Components/Desserts';
 import {MenuCategory} from './Components/MenuCategory';
 import {ShowPrice} from '../../Categories/ShowPrice';
 import {warmBeverages, coldBeverages, desserts} from '../../productList';
@@ -26,7 +26,7 @@ const MainMenu=()=>{
         switch(area){
             case 'Desserts':
                 return <Desserts/>;
-            case 'Warm Drinks':
+            case 'Hot Drinks':
                 return <HotDrinks/>;
             case 'Cold Drinks':
                 return <ColdDrinks/>;   
