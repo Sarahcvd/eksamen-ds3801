@@ -1,232 +1,238 @@
 const hotDrinks = [
     {
-        id: "Filterkaffe",
+        id: 'Filterkaffe',
         size: [
-            {
-                name: "Filterkaffe (liten)",
-                price: 28
-            },
-            {
-                name: "Filterkaffe (medium)",
-                price: 32
-            },
-            {
-                name: "Filterkaffe (stor)",
-                price: 36
-            }
+          {
+            price: 28,
+            size: 'liten',
+          },
+          {
+            price: 32,
+            size: 'medium',
+          },
+          {
+            price: 36,
+            size: 'stor',
+          },
         ],
-        img: ''
-    },
-    {
-        id: "Cappuccino",
+        img: '',
+      },
+      {
+        id: 'Cappuccino',
         size: [
-            {
-                name: "Cappuccino (liten)",
-                price: 38
-            },
-            {
-                name: "Cappuccino (medium)",
-                price: 42
-            },
-            {
-                name: "Cappuccino (stor)",
-                price: 46
-            }
+          {
+            price: 38,
+            size: 'liten',
+          },
+          {
+            price: 42,
+            size: 'medium',
+          },
+          {
+            price: 46,
+            size: 'stor',
+          },
         ],
-        img: ''
-    },
-    {
-        id: "Americano",
+        img: '',
+      },
+      {
+        id: 'Americano',
         size: [
-            {
-                name: "Americano (liten)",
-                price: 32
-            },
-            {
-                name: "Americano (medium)",
-                price: 36
-            },
-            {
-                name: "Americano (stor)",
-                price: 40
-            }
+          {
+            price: 32,
+            size: 'liten',
+          },
+          {
+            price: 36,
+            size: 'medium',
+          },
+          {
+            price: 40,
+            size: 'stor',
+          },
         ],
-        img: ''
-    },
-    {
-        id: "Kaffe Mocha",
+        img: '',
+      },
+      {
+        id: 'Kaffe Mocha',
         size: [
-            {
-                name: "Kaffe Mocha (liten)",
-                price: 38
-            },
-            {
-                name: "Kaffe Mocha (liten)",
-                price: 42
-            },
-            {
-                name: "Kaffe Mocha (liten)",
-                price: 46
-            }
+          {
+            price: 38,
+            size: 'liten',
+          },
+          {
+            price: 42,
+            size: 'medium',
+          },
+          {
+            price: 46,
+            size: 'stor',
+          },
         ],
-        img: ''
-    },
-    {
-        id: "Kaffe Latte",
+        img: '',
+      },
+      {
+        id: 'Kaffe Latte',
         size: [
-            {
-                name: "Kaffe Latte (liten)",
-                price: 38
-            },
-            {
-                name: "Kaffe Latte (medium)",
-                price: 44
-            },
-            {
-                name: "Kaffe Latte (stor)",
-                price: 48
-            }
+          {
+            price: 38,
+            size: 'liten',
+          },
+          {
+            price: 44,
+            size: 'medium',
+          },
+          {
+            price: 48,
+            size: 'stor',
+          },
         ],
-        img: ''
-    },
-    {
-        id: "Caramel Macchiato",
+        img: '',
+      },
+      {
+        id: 'Caramel Macchiato',
         size: [
-            {
-                name: "Caramel Macchiato (liten)",
-                price: 45
-            },
-            {
-                name: "Caramel Macchiato (medium)",
-                price: 48
-            },
-            {
-                name: "Caramel Macchiato (stor)",
-                price: 51
-            }
+          {
+            price: 45,
+            size: 'liten',
+          },
+          {
+            price: 48,
+            size: 'medium',
+          },
+          {
+            price: 51,
+            size: 'stor',
+          },
         ],
-        img: ''
-    },
-    {
-        id: "Espresso",
+        img: '',
+      },
+      {
+        id: 'Espresso',
         size: [
-            {
-                name: "Espresso (liten)",
-                price: 34
-            },
-            {
-                name: "Espresso (medium)",
-                price: 38
-            },
-            {
-                name: "Espresso (stor)",
-                price: 42
-            }
+          {
+            price: 34,
+            size: 'liten',
+          },
+          {
+            price: 38,
+            size: 'medium',
+          },
+          {
+            price: 42,
+            size: 'stor',
+          },
         ],
-        img: ''
-    },
-    {
-        id: "Cortado",
+        img: '',
+      },
+      {
+        id: 'Cortado',
         size: [
-            {
-                name: "Cortado (liten)",
-                price: 36
-            },
-            {
-                name: "Cortado (medium)",
-                price: 40
-            },
-            {
-                name: "Cortado (stor)",
-                price: 44
-            }
+          {
+            price: 36,
+            size: 'liten',
+          },
+          {
+            price: 40,
+            size: 'medium',
+          },
+          {
+            price: 44,
+            size: 'stor',
+          },
         ],
-        img: ''
-    }
-];
-
-const coldDrinks = [
-    {
-        id: "Iskaffe",
+        img: '',
+      },
+    ];
+    
+    const coldDrinks = [
+      {
+        id: 'Iskaffe',
         size: [
-            {
-                name: "Iskaffe (liten)",
-                price: 36
-            },
-            {
-                name: "Iskaffe (medium)",
-                price: 42
-            },
-            {
-                name: "Iskaffe (stor)",
-                price: 50
-            }
+          {
+            name: 'Iskaffe (liten)',
+            price: 36,
+            size: 'liten',
+          },
+          {
+            name: 'Iskaffe (medium)',
+            price: 42,
+            size: 'medium',
+          },
+          {
+            name: 'Iskaffe (stor)',
+            price: 50,
+            size: 'stor',
+          },
         ],
-        img: ''
-    },
-    {
-        id: "Iste",
+        img: '',
+      },
+      {
+        id: 'Iste',
         size: [
-            {
-                name: "Iste (liten)",
-                price: 38
-            },
-            {
-                name: "Iste (medium)",
-                price: 47
-            },
-            {
-                name: "Iste (stor)",
-                price: 55
-            }
+          {
+            name: 'Iste (liten)',
+            price: 38,
+            size: 'liten',
+          },
+          {
+            name: 'Iste (medium)',
+            price: 47,
+            size: 'medium',
+          },
+          {
+            name: 'Iste (stor)',
+            price: 55,
+            size: 'stor',
+          },
         ],
-        img: ''
-    }
-];
-
-const desserts = [
-    {
-        id: "Brownies",
+        img: '',
+      },
+    ];
+    
+    const desserts = [
+      {
+        id: 'Brownies',
         name: 'Brownies',
         price: 44,
         img: '',
-    },
-    {
-        id: "Oreokake",
+      },
+      {
+        id: 'Oreokake',
         name: 'Oreokake',
         price: 54,
         img: '',
-    },
-    {
-        id: "Kanelbolle",
+      },
+      {
+        id: 'Kanelbolle',
         name: 'Kanelbolle',
         price: 46,
         img: '',
-    },
-    {
-        id: "Croissant",
+      },
+      {
+        id: 'Croissant',
         name: 'Croissant',
         price: 38,
         img: '',
-    },
-    {
-        id: "Chiapudding",
+      },
+      {
+        id: 'Chiapudding',
         name: 'Chiapudding',
         price: 42,
         img: '',
-    },
-    {
-        id: "Brioche",
+      },
+      {
+        id: 'Brioche',
         name: 'Brioche',
         price: 44,
         img: '',
-    },
-    {
-        id: "Scones",
+      },
+      {
+        id: 'Scones',
         name: 'Scones',
         price: 37,
         img: '',
-    }
-];
+      },
+    ];
 
 export {hotDrinks, coldDrinks, desserts};

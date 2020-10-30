@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import {ShoppingCart} from '../ShoppingCart';
 
 const Drink = (props) =>{
-    const shoppingCart = useContext(ShoppingCart); /* Klassen ShoppingCart må opprettes  */
+    const shoppingCart = useContext(ShoppingCart); 
 
     const getOrderdCount = (product) => {
         if (shoppingCart.products[props.type.id] && shoppingCart.products[props.type.id][product.size]) {
@@ -20,8 +20,8 @@ const Drink = (props) =>{
             [props.type.id]: {
               ...prevstate[props.type.id],
               [product.size]: {
-                count: orderdCount + 1,
-                price: product.price,
+                size: orderdCount + 1,
+                price: product.price
               },
             },
           };
@@ -36,10 +36,11 @@ const Drink = (props) =>{
                 return {
                     ...prevstate,
                     [props.type.id]: {
-                    ...prevstate[props.type.id],
-                    [product.size]: {
-                        count: orderdCount - 1,
-                    },
+                        ...prevstate[props.type.id],
+                        [product.size]: {
+                            size: orderdCount - 1,
+                            price: product.price
+                        },
                     },
                 };
             });
@@ -47,7 +48,7 @@ const Drink = (props) =>{
     };
 
     return (
-    <div className='menu-coatainer-dessert'>
+    <div className="product-container">
         <div className='product-title'>{props.type.id}</div>
         {props.type.size.map((product) => {
         return (

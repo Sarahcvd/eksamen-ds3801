@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import MainMenu from './Menu/MainMenu';
 import MainPage from './MainPage/MainPage';
+import MainMenu from './Menu/MainMenu';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import {ShoppingCart} from '../ShoppingCart';
+import {Cart} from './Cart';
 
 const MainApp = (props) => {
   //useState and props products/setProducts
@@ -11,20 +12,21 @@ const MainApp = (props) => {
     <Router>
       {/*accepts values to be passed to ShoppingCart*/}
       <ShoppingCart.Provider value={{products, setProducts}}>
-        {/*Title*/}
-      <header id="header-container">
-        <h1 id="header-title">leCafé</h1>
-        {/*Links to MainMenu and MainPage*/}
-      </header>
-      <Link to="/MainMenu">Main Menu</Link>
-      <Link to="/MainPage">Main Page</Link>
-      
-      {/*Switch route path*/}
-      <Switch>
-        <Route exact path='/MainMenu/:area?' component={MainMenu}/>
-        <Route exact path='/ShoppingCart/:area?' component={MainMenu} />
-        <Route exact path="/" component={MainPage} />
-      </Switch>
+        <header id="header-container">
+          {/*Title*/}
+          <h1 id="header-title">leCafé</h1>
+        </header>
+          {/*Links to MainMenu and MainPage*/}
+        <Link to="/MainPage/MainPage">Front Page</Link>
+        <Link to="/MainMenu">Main Menu</Link>
+        <Link to="/Cart">Shopping Cart</Link>
+        
+        {/*Switch route path*/}
+        <Switch>
+          <Route exact path='/MainMenu/:area?' component={MainMenu}/>
+          <Route exact path='/Cart/' component={Cart} />
+          <Route component={MainPage} />
+        </Switch>
       </ShoppingCart.Provider>
     </Router>
   );

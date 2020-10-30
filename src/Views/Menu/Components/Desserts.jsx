@@ -3,13 +3,12 @@ import { desserts } from '../../../productList';
 import Dessert from '../../../Categories/Dessert';
 
 export const Desserts = () => {
-  return desserts.map((desserts) => (
-    
+  return desserts.map((dessert) => (
     // This component doesnt include choice of size.
-    <Dessert
-      key={desserts.id}
-      name={desserts.name}
-      price={desserts.price}
-    />
+      <Dessert
+        key={dessert.id}
+        name={dessert.name}
+        price={dessert.price}
+      />
   ));
 };

@@ -2,10 +2,10 @@ import React, { useEffect, useContext, useState } from 'react';
 import { ShoppingCart } from '../ShoppingCart';
 
 export const ShowPrice = (props) => {
-    const shoppingCart = useContext(ShoppingCart); /* Klassen ShoppingCart må opprettes  */
+    const shoppingCart = useContext(ShoppingCart); 
     const [totalPrice, setTotalPrice] = useState(0);
 
-    useEffect(() =>{
+    useEffect(() => {
         totalPriceSum();
     }, [shoppingCart.products]);
     
@@ -16,7 +16,7 @@ export const ShowPrice = (props) => {
         Object.keys(shoppingCart.products).forEach((product) => {
             console.log('product', shoppingCart.products[product]);
             Object.keys(shoppingCart.products[product]).forEach((size) => {
-                const count = shoppingCart.products[product][size].count;
+                const count = shoppingCart.products[product][size].size;
                 const price = shoppingCart.products[product][size].price;
                 sum += count * price;
             });
@@ -26,7 +26,7 @@ export const ShowPrice = (props) => {
 
     return (
         <div>
-            {props.totalPrice > 0 && (
+            {totalPrice > 0 && (
                 <div id="total-price-div">
                     <div id="text-output">Se din bestilling</div>
                     <div id="total-price-output">kr: <b>{totalPrice}</b></div>

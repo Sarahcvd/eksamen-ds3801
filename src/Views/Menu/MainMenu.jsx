@@ -13,32 +13,32 @@ import '../../styles.css';
 
 
 const MainMenu=()=>{
-    const menuCategoryName = ['Desserts', 'Hot Drinks', 'Cold Drinks'];
+    const menuCategoryNames = ['Hot Drinks', 'Cold Drinks', 'Desserts'];
     let totalPrice = 1;
 
+    const [menuCategory, setMenuCategory] = useState(menuCategoryNames[0]);
     const [menuProduct, setMenuProduct] = useState([]);
-    const [menuCategory, setMenuCategory] = useState(menuCategoryName[0]);
 
     let {area} = useParams();
 
     const getArea=()=>{
-
         switch(area){
+            case 'HotDrinks':
+                return <div className="product-list-container"><HotDrinks/></div>;
+            case 'ColdDrinks':
+                return <div className="product-list-container"><ColdDrinks/></div>;
             case 'Desserts':
-                return <Desserts/>;
-            case 'Hot Drinks':
-                return <HotDrinks/>;
-            case 'Cold Drinks':
-                return <ColdDrinks/>;   
+                return <div className="product-list-container"><Desserts/></div>;
+            default:
+                return <div className="product-list-container"><HotDrinks/></div>;
         }
-
     };
 
     return(
         <>
-        <MenuCategory/>
+        {/*<MenuCategory/>*/}
             {getArea()}
-        <ShowPrice totalPrice={1}/>
+        <ShowPrice totalPrice={totalPrice}/>
         </>
     );
     
