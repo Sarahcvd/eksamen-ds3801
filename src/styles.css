@@ -212,7 +212,6 @@ body{
 
 /* PRODUCT CONTAINER */
 .product-container{
-    grid-row: 2;
     border-radius: 15px;
     width: auto;
     width: 385px;
