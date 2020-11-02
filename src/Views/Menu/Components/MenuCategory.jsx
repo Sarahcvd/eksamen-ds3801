@@ -26,7 +26,7 @@ export const MenuCategory = () => {
                 className={`menu-category-btn ${area==='Desserts' ? 'active-btn' : ''}`}
                 onClick={()=> history.push('/MainMenu/Desserts')}
                 >
-                <h1 id="desserts-title">Desserter</h1>
+                <h1 id="desserts-title-main-page">Desserter</h1>
             </div>
         </div>
     );
