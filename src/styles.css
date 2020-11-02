@@ -49,32 +49,12 @@ h3, h4, h5 {
     padding: 2%;
 }
 
-/*
-#menu-icon{
-    height: 50px;
-    margin-top: 15px;
-    margin-left: 55px;
-    grid-column: 1 / span 1;
-}*/
 
 #header-title{
     text-align: center;
     grid-column: 2 / span 1;
 }
 
-/*
-.cart {
-    grid-column: 3 / span 1;
-    position: absolute;
-}
-.cart, img{
-    height: 50px;
-    margin-top: 15px;
-    left: 15px;
-    text-align: end;
-    position: relative;
-    left: -25px;
-}*/
 
 /* CATEGORIES */
 /* front page view*/
@@ -187,17 +167,32 @@ h3, h4, h5 {
     display: grid;
     grid-template-rows: auto auto auto auto auto auto auto auto;
 }
-
-
-/* NAVIGATION BAR */
-/*#nav-bar-container{
-    grid-row: 1;
-    display: grid;
-    grid-template-columns: auto auto auto;
-}*/
-
 #front-page-link{
     grid-row: 2;
+}
+
+/* PRODUCT CONTAINER */
+.product-container{
+    border-radius: 15px;
+    width: auto;
+    width: 385px;
+    height: 200px;
+    color: white;
+    background-color: white;
+    padding: 5px;
+    margin: 15px;
+    background-image: url("./images/desserter.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Desserts */
+.price-dessert{
+    color: white;
+    width: fit-content;
+    padding: 0px 10px 0px 10px;
+    font-size: large;
 }
 
 #shopping-cart-link{
@@ -215,31 +210,28 @@ h3, h4, h5 {
     /*position: fixed;*/
 }
 
-#category-menu{
+/* NAVIGATION BAR */
+#nav-bar-container{
     grid-row: 3;
-    background-image: none;
+    grid-column: 1 /span 3;
     display: grid;
     grid-template-columns: auto auto auto;
-    
 }
+
 .menu-category-btn{
     grid-row: 1;
     grid-column: 1;
     background-color: #B37A7A;  
     color: white;
     border-radius: 15px;
-}
-
-.menu-category-button{
-    border: 1px solid #B37A7A;
-    padding: 5px;
-    border-radius: 15px;
-    display: inline-block;
     width: fit-content;
-    color: #B37A7A;
+    height: fit-content;
+    font-size: 0.6rem;
+    padding: 5px;
+    cursor: pointer;
 }
 
-#hot-category {
+#hot-drinks-nav-bar{
     grid-row: 1;
     grid-column: 1;
     background-color: #B37A7A;  
@@ -247,53 +239,17 @@ h3, h4, h5 {
     border-radius: 15px;
 }
 
-#cold-category{
+#cold-drinks-nav-bar{
     grid-row: 1;
     grid-column: 2;
 }
 
-#desserts-category{
+#desserts-nav-bar{
     grid-row: 1;
     grid-column: 3;
-}
-
-
-/* PRODUCT CONTAINER */
-.product-container{
-    border-radius: 15px;
-    width: auto;
-    width: 385px;
-    height: 200px;
-    color: white;
-    background-color: white;
-    padding: 5px;
-    margin: 15px;
-    background-image: url("./images/desserter.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    
-}
-
-/* Desserts */
-.price-dessert{
-    color: white;
-    width: fit-content;
-    padding: 0px 10px 0px 10px;
-    font-size: large;
 }
 
 /* TOTAL PRICE */
 #total-price-div{
     grid-row: 3;
-}
-
-
-/* MENU CONTAINER BEVERAGE */
-
-.menu-container-beverage{
-    border: 1px solid #B37A7A; 
-    border-radius: 15px;
-    padding: 5px;
-    margin: 5px;
 }

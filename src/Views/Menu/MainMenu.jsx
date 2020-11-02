@@ -8,6 +8,7 @@ import {MenuCategory} from './Components/MenuCategory';
 import {ShowPrice} from '../../Categories/ShowPrice';
 import {warmBeverages, coldBeverages, desserts} from '../../productList';
 import '../../styles.css'; 
+import { NavBar } from '../NavBar';
 
 
 
@@ -36,7 +37,7 @@ const MainMenu=()=>{
 
     return(
         <>
-        {/*<MenuCategory/>*/}
+        {<NavBar/>}
             {getArea()}
         <ShowPrice totalPrice={totalPrice}/>
         </>
