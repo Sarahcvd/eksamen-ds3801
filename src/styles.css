@@ -60,6 +60,7 @@ h3, h4, h5 {
 /* front page view*/
 .main-page-container{
     grid-row: 3;
+    grid-column: 1 /span 3;
 }
 
 /* Hot Drinks */
@@ -199,7 +200,6 @@ h3, h4, h5 {
     background-color: white;
     padding: 5px;
     margin: 15px;
-    /*background-image: url("./images/desserter.jpeg");*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -212,6 +212,19 @@ h3, h4, h5 {
 }
 
 
+
+/*#shopping-cart-link-div{
+    background-color: #AC6E6E;
+    height: 80px;
+    width: auto;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}*/
+
 /* Desserts */
 .price-dessert{
     color:grey;
@@ -222,19 +235,37 @@ h3, h4, h5 {
     margin-top: -33px;
 }
 
+
 #shopping-cart-link{
-    grid-row: 5;
     text-decoration: none;
+    color: white;
+    grid-column: 2;
+}
+
+#shopping-cart-output{
+    grid-column: 3;
     color: white;
 }
 
-#shopping-cart-link-div{
-    grid-row: 5;
+#text-output{
+    grid-column: 2;
+}
+#total-price-output{
+    grid-column: 3;
+}
+#total-price-div{
     background-color: #AC6E6E;
     height: 80px;
     width: auto;
     text-align: center;
-    /*position: fixed;*/
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 /* NAVIGATION BAR */
@@ -242,7 +273,8 @@ h3, h4, h5 {
     grid-row: 3;
     grid-column: 1 /span 3;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
+    overflow: hidden;
 }
 
 .menu-category-btn{
@@ -258,9 +290,15 @@ h3, h4, h5 {
     cursor: pointer;
 }
 
-#hot-drinks-nav-bar{
+#front-page-nav-bar{
     grid-row: 1;
     grid-column: 1;
+}
+
+
+#hot-drinks-nav-bar{
+    grid-row: 1;
+    grid-column: 2;
     background-color: #B37A7A;  
     color: white;
     border-radius: 15px;
@@ -268,15 +306,11 @@ h3, h4, h5 {
 
 #cold-drinks-nav-bar{
     grid-row: 1;
-    grid-column: 2;
-}
-
-#desserts-nav-bar{
-    grid-row: 1;
     grid-column: 3;
 }
 
-/* TOTAL PRICE */
-#total-price-div{
-    grid-row: 3;
+
+#desserts-nav-bar{
+    grid-row: 1;
+    grid-column: 4;
 }

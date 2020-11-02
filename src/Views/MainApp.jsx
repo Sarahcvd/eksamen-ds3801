@@ -16,10 +16,7 @@ const MainApp = (props) => {
           {/*Title*/}
           <h1 id="header-title">leCafé</h1>
         </header>
-          {/*Links to MainMenu and MainPage*/}
-        <Link id="front-page-link" to="/MainPage/MainPage">Front Page</Link>
-        <div id="shopping-cart-link-div"><Link id="shopping-cart-link" to="/Cart">Shopping Cart</Link></div>
-        
+         
         {/*Switch route path*/}
         <Switch>
           <Route exact path='/MainMenu/:area?' component={MainMenu}/>

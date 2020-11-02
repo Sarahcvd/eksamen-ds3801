@@ -8,6 +8,13 @@ export const NavBar = () => {
     return(
         <div id="nav-bar-container">
             <div
+                id="front-page-nav-bar"
+                className={`menu-category-btn ${area === 'frontPage' ? 'active-btn' : ''}`}
+                onClick={()=> history.push('/')}
+            >
+                <h1>Forsiden</h1>
+            </div>
+            <div
                 id="hot-drinks-nav-bar"
                 className={`menu-category-btn ${area === 'HotDrinks' ? 'active-btn' : ''}`}
                 onClick={()=> history.push('/MainMenu/HotDrins')}

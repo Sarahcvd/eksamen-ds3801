@@ -18,7 +18,7 @@ export const Cart = (props) => {
                         console.log("Pris:  " + price);
                     });
                 })}
-                <div id="shopping-cart-output">Du har bestilt + {count, price}</div>
+                <div id="shopping-cart-output">{count, price}</div>
             </div>
         </>
     );

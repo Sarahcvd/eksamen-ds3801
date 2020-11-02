@@ -27,10 +27,12 @@ export const ShowPrice = (props) => {
     return (
         <div>
             {totalPrice > 0 && (
-                <div id="total-price-div">
-                    <div id="text-output">Se din bestilling</div>
-                    <div id="total-price-output">kr: <b>{totalPrice}</b></div>
-                </div>
+                <a href="/Cart">
+                    <div id="total-price-div">
+                        <div id="text-output">Se din bestilling</div>
+                        <div id="total-price-output">kr: <b>{totalPrice}</b></div>
+                    </div>
+                </a>
             )}
         </div>
     );
