@@ -37,8 +37,7 @@ h3, h4, h5 {
     margin: 10x;
 }
 
-/* MENU */
-
+/* HEADER */
 #header-container{
     grid-row: 1;
     grid-column: 1 /span 3;
@@ -49,21 +48,20 @@ h3, h4, h5 {
     padding: 2%;
 }
 
-
 #header-title{
     text-align: center;
     grid-column: 2 / span 1;
 }
 
 
-/* CATEGORIES */
+/* MENU CATEGORIES */
 /* front page view*/
 .main-page-container{
-    grid-row: 3;
+    grid-row: 2;
     grid-column: 1 /span 3;
 }
 
-/* Hot Drinks */
+/* Hot Drinks Card */
 #hot-drinks-container {
     border-radius: 15px;
     width: 385px;
@@ -76,8 +74,6 @@ h3, h4, h5 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    grid-column: 1 / span 3;
-    grid-row: 2;
     cursor: pointer;
     transition: 0.4s;
 }
@@ -95,7 +91,7 @@ h3, h4, h5 {
 }
 
 
-/* Cold Drinks */
+/* Cold Drinks Card */
 
 #cold-drinks-container{
     border-radius: 15px;
@@ -110,8 +106,6 @@ h3, h4, h5 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    grid-column: 1 / span 3;
-    grid-row: 3;
     cursor: pointer;
     transition: 0.4s;
 }
@@ -130,7 +124,7 @@ h3, h4, h5 {
 
 
 
-/* Desserts */
+/* Desserts Card */
 
 #desserts-container{
     border-radius: 15px;
@@ -145,8 +139,6 @@ h3, h4, h5 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    grid-column: 1 / span 3;
-    grid-row: 4;
     cursor: pointer;
     transition: 0.4s;
 }
@@ -163,123 +155,9 @@ h3, h4, h5 {
     font-size: x-large;
 }
 
-
-/* PRODUCT LIST CONTAINER */
-.product-list-container{
-    grid-row: 4;
-    grid-column: 1 /span 3;
-    display: grid;
-    grid-template-rows: auto auto auto auto auto auto auto auto;
-}
-#front-page-link{
-    grid-row: 2;
-}
-
-/* PRODUCT CONTAINER */
-.product-container{
-    border-radius: 5px;
-    width: auto;
-    width: 385px;
-    height: 100px;
-    color: black;
-    background-color: white;
-    padding: 5px;
-    margin: 15px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: 3px 3px 20px -3px rgba(0, 0, 0, 0.5);
-}
-
-.product-title{
-    margin-top: -60px;
-    margin-left: 120px;
-}
-
-#drink-image{
-    margin-top: 20px;
-    margin-left: 20px;
-    height: 60px;
-    width: 60px;
-}
-
-/* Desserts */
-.price-dessert{
-    color:grey;
-    width: fit-content;
-    padding: 0px 10px 0px 10px;
-    font-size: large;
-    margin-left: 250px;
-    margin-top: -33px;
-}
-
-#desserts-title{
-    margin-top: -60px;
-    margin-left: 100px;
-    color:black;
-    width: fit-content;
-    padding: 0px 10px 0px 10px;
-    font-size: x-large;
-}
-
-#dessert-image{
-    margin-top: 20px;
-    margin-left: 20px;
-    height: 60px;
-    width: 60px;
-}
-
-
-/*#shopping-cart-link-div{
-    background-color: #AC6E6E;
-    height: 80px;
-    width: auto;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto auto;
-}*/
-
-
-
-
-#shopping-cart-link{
-    text-decoration: none;
-    color: white;
-    grid-column: 2;
-}
-
-#shopping-cart-output{
-    grid-column: 3;
-    color: white;
-}
-
-#text-output{
-    grid-column: 2;
-}
-#total-price-output{
-    grid-column: 3;
-}
-#total-price-div{
-    background-color: #AC6E6E;
-    height: 80px;
-    width: auto;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    text-decoration: none;
-    color: white;
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
-
 /* NAVIGATION BAR */
 #nav-bar-container{
-    grid-row: 3;
+    grid-row: 2;
     grid-column: 1 /span 3;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -304,7 +182,6 @@ h3, h4, h5 {
     grid-column: 1;
 }
 
-
 #hot-drinks-nav-bar{
     grid-row: 1;
     grid-column: 2;
@@ -318,8 +195,96 @@ h3, h4, h5 {
     grid-column: 3;
 }
 
-
 #desserts-nav-bar{
     grid-row: 1;
     grid-column: 4;
+}
+
+
+/* PRODUCT LIST CONTAINER */
+.product-list-container{
+    grid-row: 3;
+    grid-column: 1 /span 3;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+}
+
+/* Product container */
+.product-container{
+    border-radius: 5px;
+    width: auto;
+    width: 385px;
+    height: 100px;
+    color: black;
+    background-color: white;
+    padding: 5px;
+    margin: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 3px 3px 20px -3px rgba(0, 0, 0, 0.5);
+}
+
+#drink-image{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 60px;
+    width: 60px;
+}
+
+.product-title{
+    margin-top: -60px;
+    margin-left: 120px;
+}
+
+
+/* Desserts */
+#dessert-image{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 60px;
+    width: 60px;
+}
+
+#desserts-title{
+    margin-top: -60px;
+    margin-left: 100px;
+    color:black;
+    width: fit-content;
+    padding: 0px 10px 0px 10px;
+    font-size: x-large;
+}
+
+.price-dessert{
+    color:grey;
+    width: fit-content;
+    padding: 0px 10px 0px 10px;
+    font-size: large;
+    margin-left: 250px;
+    margin-top: -33px;
+}
+
+
+/* SHOPPING CART BAR */
+#total-price-div{
+    background-color: #AC6E6E;
+    height: 80px;
+    width: auto;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#text-output{
+    grid-column: 2;
+}
+
+#total-price-output{
+    grid-column: 3;
 }
