@@ -27,9 +27,7 @@ const MainPage = () =>{
     return(
         <>
             <div>{shoppingCart}</div>
-            <div>
-                <MenuCategory/>
-            </div>
+            <MenuCategory/>
             {getArea()}
             <ShowPrice totalPrice={totalPrice}/>
         </>

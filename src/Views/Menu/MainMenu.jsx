@@ -36,7 +36,7 @@ const MainMenu=()=>{
 
     return(
         <>
-        {/*<MenuCategory/>*/}
+        {<MenuCategory/>}
             {getArea()}
         <ShowPrice totalPrice={totalPrice}/>
         </>

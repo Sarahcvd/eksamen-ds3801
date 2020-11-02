@@ -10,7 +10,7 @@ body{
 #root {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     grid-gap: 10px;
     margin: 10x;
 }
@@ -18,13 +18,13 @@ body{
 /* MENU */
 
 #header-container{
+    grid-row: 1;
+    grid-column: 1 /span 3;
     display: grid;
     grid-template-columns: auto auto auto;
     height: 50px;
     width: 100%;
     padding: 2%;
-    grid-column-start: 1;
-    grid-column-end: 4;
 }
 
 /*
@@ -55,7 +55,7 @@ body{
 }*/
 
 /* CATEGORIES */
-
+/* front page view*/
 .main-page-container{
     grid-row: 3;
 }
@@ -140,46 +140,43 @@ body{
 }
 
 
-
-/* Pastries 
-
-#pastry-container{
-    border-radius: 15px;
-    width: auto;
-    height: 400px;
-    color: white;
-    background-color: white;
-    padding: 5px;
-    margin: 15px;
-    background-image: url("../images/pastries.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    grid-column: 1 / span 3;
-    grid-row: 5;
-}
-
-#pastry-title{
-    color: black;
-    background-color: #F7F8F7;
-    width: fit-content;
-    border: 2px solid rgb(63, 63, 63);
-    padding: 0px 10px 0px 10px;
-}
-*/
-
 /* PRODUCT LIST CONTAINER */
 .product-list-container{
-    grid-row: 3;
+    grid-row: 4;
+    grid-column: 1 /span 3;
     display: grid;
     grid-template-rows: auto auto auto auto auto auto auto auto;
 }
 
+
 /* NAVIGATION BAR */
-#nav-bar-container{
+/*#nav-bar-container{
     grid-row: 1;
     display: grid;
     grid-template-columns: auto auto auto;
+}*/
+
+#front-page-link{
+    grid-row: 2;
+}
+
+#shopping-cart-link{
+    grid-row: 5;
+}
+
+#category-menu{
+    grid-row: 3;
+    background-image: none;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+}
+.menu-category-btn{
+    grid-row: 1;
+    grid-column: 1;
+    background-color: #B37A7A;  
+    color: white;
+    border-radius: 15px;
 }
 
 .menu-category-button{

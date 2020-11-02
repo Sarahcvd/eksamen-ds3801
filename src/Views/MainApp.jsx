@@ -17,9 +17,8 @@ const MainApp = (props) => {
           <h1 id="header-title">leCafé</h1>
         </header>
           {/*Links to MainMenu and MainPage*/}
-        <Link to="/MainPage/MainPage">Front Page</Link>
-        <Link to="/MainMenu">Main Menu</Link>
-        <Link to="/Cart">Shopping Cart</Link>
+        <Link id="front-page-link" to="/MainPage/MainPage">Front Page</Link>
+        <Link id="shopping-cart-link" to="/Cart">Shopping Cart</Link>
         
         {/*Switch route path*/}
         <Switch>

@@ -6,7 +6,7 @@ export const MenuCategory = () => {
     const history = useHistory();
 
     return(
-        <div className="main-page-container">
+        <div className="main-page-container" id="category-menu">
             <div
                 id="hot-drinks-container"
                 className={`menu-category-btn ${area === 'HotDrinks' ? 'active-btn' : ''}`}
