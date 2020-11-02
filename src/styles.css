@@ -1,9 +1,31 @@
-*{
-    font-family: "Helvetica Neue";
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    
 }
 body{
+    font-family: times, serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.6;
     background-color: #F7F8F7;
     margin: 0 auto;
+    overflow: scroll;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    color: #8f8f8f;
 }
 
 /* MAIN CONTAINER */
@@ -75,6 +97,12 @@ body{
     background-position: center;
     grid-column: 1 / span 3;
     grid-row: 2;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#hot-drinks-container:hover {
+    box-shadow: 10px 10px 80px -20px rgba(0, 0, 0, 0.8);
 }
 
 #hot-drinks-title{
@@ -102,6 +130,12 @@ body{
     background-position: center;
     grid-column: 1 / span 3;
     grid-row: 3;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#cold-drinks-container:hover {
+    box-shadow: 10px 10px 80px -20px rgba(0, 0, 0, 0.8);
 }
 
 #cold-drinks-title{
@@ -129,6 +163,12 @@ body{
     background-position: center;
     grid-column: 1 / span 3;
     grid-row: 4;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#desserts-container:hover {
+    box-shadow: 10px 10px 80px -20px rgba(0, 0, 0, 0.8);
 }
 
 #desserts-title{
