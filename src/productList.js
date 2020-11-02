@@ -1,3 +1,20 @@
+import React from 'react';
+
+import americano from '../src/icons/americano.png'
+import brioche from '../src/icons/brioche.png'
+import brownies from '../src/icons/brownies.png'
+import caramelmacchiato from '../src/icons/caramelMacchiato.png'
+import chiapudding from '../src/icons/chiapudding.png'
+import croissant from '../src/icons/croissant.png'
+import expresso from '../src/icons/espresso.png'
+import filterkaffe from '../src/icons/Filterkaffe.png'
+import iskaffe from '../src/icons/iskaffe.png'
+import kanelbolle from '../src/icons/kanelbolle.png'
+import latte from '../src/icons/latte.png'
+import mocha from '../src/icons/mocha.png'
+import oreokake from '../src/icons/oreokake.png'
+import scones from '../src/icons/scones.png'
+
 const hotDrinks = [
     {
         id: 'Filterkaffe',
@@ -15,7 +32,7 @@ const hotDrinks = [
             size: 'stor',
           },
         ],
-        img: '',
+        img: filterkaffe,
       },
       {
         id: 'Cappuccino',
@@ -51,7 +68,7 @@ const hotDrinks = [
             size: 'stor',
           },
         ],
-        img: '',
+        img: americano,
       },
       {
         id: 'Kaffe Mocha',
@@ -69,7 +86,7 @@ const hotDrinks = [
             size: 'stor',
           },
         ],
-        img: '',
+        img: mocha,
       },
       {
         id: 'Kaffe Latte',
@@ -87,7 +104,7 @@ const hotDrinks = [
             size: 'stor',
           },
         ],
-        img: '',
+        img: latte,
       },
       {
         id: 'Caramel Macchiato',
@@ -105,7 +122,7 @@ const hotDrinks = [
             size: 'stor',
           },
         ],
-        img: '',
+        img: caramelmacchiato,
       },
       {
         id: 'Espresso',
@@ -123,7 +140,7 @@ const hotDrinks = [
             size: 'stor',
           },
         ],
-        img: '',
+        img: expresso,
       },
       {
         id: 'Cortado',
@@ -165,7 +182,7 @@ const hotDrinks = [
             size: 'stor',
           },
         ],
-        img: '',
+        img: iskaffe,
       },
       {
         id: 'Iste',
@@ -186,7 +203,7 @@ const hotDrinks = [
             size: 'stor',
           },
         ],
-        img: '',
+        img: iskaffe,
       },
     ];
     
@@ -195,43 +212,43 @@ const hotDrinks = [
         id: 'Brownies',
         name: 'Brownies',
         price: 44,
-        img: '',
+        img: brownies,
       },
       {
         id: 'Oreokake',
         name: 'Oreokake',
         price: 54,
-        img: '',
+        img: oreokake,
       },
       {
         id: 'Kanelbolle',
         name: 'Kanelbolle',
         price: 46,
-        img: '',
+        img: kanelbolle,
       },
       {
         id: 'Croissant',
         name: 'Croissant',
         price: 38,
-        img: '',
+        img: croissant,
       },
       {
         id: 'Chiapudding',
         name: 'Chiapudding',
         price: 42,
-        img: '',
+        img: chiapudding,
       },
       {
         id: 'Brioche',
         name: 'Brioche',
         price: 44,
-        img: '',
+        img: brioche,
       },
       {
         id: 'Scones',
         name: 'Scones',
         price: 37,
-        img: '',
+        img: scones,
       },
     ];
 

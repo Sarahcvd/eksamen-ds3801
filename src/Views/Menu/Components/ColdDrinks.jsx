@@ -8,6 +8,6 @@ import {NavBar} from '../../NavBar'
 export const ColdDrinks = () => {
     return coldDrinks.map((coldDrink) =>(
         <NavBar />,
-        <Drink type={coldDrink} />
+        <Drink type={coldDrink} img={coldDrink.img} />
     ));
 };

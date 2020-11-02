@@ -49,6 +49,7 @@ const Drink = (props) =>{
 
     return (
     <div className="product-container">
+        <img id="drink-image" src={props.img}></img>
         <div className='product-title'>{props.type.id}</div>
         {props.type.size.map((product) => {
         return (

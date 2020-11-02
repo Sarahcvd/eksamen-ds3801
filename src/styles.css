@@ -86,12 +86,14 @@ h3, h4, h5 {
 }
 
 #hot-drinks-title{
-    margin-top: 80px;
-    color: white;
+    margin-left: 100px;
+    margin-top: 50px;
+    color:black;
     width: fit-content;
     padding: 0px 10px 0px 10px;
     font-size: x-large;
 }
+
 
 /* Cold Drinks */
 
@@ -119,11 +121,19 @@ h3, h4, h5 {
 }
 
 #cold-drinks-title{
-    margin-top: 80px;
-    color: white;
+    margin-top: 50px;
+    margin-left: 100px;
+    color:black;
     width: fit-content;
     padding: 0px 10px 0px 10px;
     font-size: x-large;
+}
+
+#drink-image{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 60px;
+    width: 60px;
 }
 
 /* Desserts */
@@ -152,11 +162,19 @@ h3, h4, h5 {
 }
 
 #desserts-title{
-    margin-top: 80px;
-    color: white;
+    margin-top: -60px;
+    margin-left: 100px;
+    color:black;
     width: fit-content;
     padding: 0px 10px 0px 10px;
     font-size: x-large;
+}
+
+#dessert-image{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 60px;
+    width: 60px;
 }
 
 
@@ -173,26 +191,35 @@ h3, h4, h5 {
 
 /* PRODUCT CONTAINER */
 .product-container{
-    border-radius: 15px;
+    border-radius: 5px;
     width: auto;
     width: 385px;
-    height: 200px;
-    color: white;
+    height: 100px;
+    color: black;
     background-color: white;
     padding: 5px;
     margin: 15px;
-    background-image: url("./images/desserter.jpeg");
+    /*background-image: url("./images/desserter.jpeg");*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    box-shadow: 3px 3px 20px -3px rgba(0, 0, 0, 0.5);
 }
+
+.product-title{
+    margin-top: -60px;
+    margin-left: 120px;
+}
+
 
 /* Desserts */
 .price-dessert{
-    color: white;
+    color:grey;
     width: fit-content;
     padding: 0px 10px 0px 10px;
     font-size: large;
+    margin-left: 250px;
+    margin-top: -33px;
 }
 
 #shopping-cart-link{
