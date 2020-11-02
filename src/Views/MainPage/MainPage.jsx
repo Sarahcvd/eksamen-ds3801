@@ -36,31 +36,3 @@ const MainPage = () =>{
 }
 
 export default MainPage;
-
-
-/**
-
-
-THIS IS NOW IN MENU CATEGORY
- return(
-        <div className="main-page-container">
-            <a href="./Menu/Components/HotDrinks">
-                <div id="hot-drinks-container">
-                <h1 id="hot-drinks-title">Varme Drikker</h1>
-                </div>
-            </a>
-            <a href="./Menu/Components/ColdDrinks">
-                <div id="cold-drinks-container">
-                <h1 id="cold-drinks-title">Kalde Drikker</h1>
-                <img/>
-                </div>
-            </a>
-            <a href="./Menu/Components/Desserts">
-                <div id="desserts-container">
-                <h1 id="desserts-title">Desserter</h1>
-                <img/>
-                </div>
-            </a>
-        </div>
-    )
- */
