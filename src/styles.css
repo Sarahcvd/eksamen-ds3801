@@ -202,6 +202,17 @@ h3, h4, h5 {
 
 #shopping-cart-link{
     grid-row: 5;
+    text-decoration: none;
+    color: white;
+}
+
+#shopping-cart-link-div{
+    grid-row: 5;
+    background-color: #AC6E6E;
+    height: 80px;
+    width: auto;
+    text-align: center;
+    /*position: fixed;*/
 }
 
 #category-menu{
