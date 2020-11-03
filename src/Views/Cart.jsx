@@ -20,6 +20,7 @@ export const Cart = (props) => {
                 })}
                 <div id="shopping-cart-output">{count, price}</div>
             </div>
+            <a href="/"><div>Back to front</div></a>
         </>
     );
 };
