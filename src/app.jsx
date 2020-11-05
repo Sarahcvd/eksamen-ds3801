@@ -19,7 +19,8 @@ const App = (props) => {
 
   const headerTitleStyle = {
     textAlign: "center",
-    gridColumn: "2 / span 1"
+    gridColumn: "2 / span 1",
+    color: "#AC6E6E"
   }
 
   //useState and props products/setProducts

@@ -33,7 +33,9 @@ body{
     text-decoration: none;
     color: black;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 120px 190px 50px auto;
+    height: 100px;
+    text-align: left;
 }
 
 #product-count-section{

@@ -1,19 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import '../styles2.css';
+import arrow from "../images/arrow.png";
 
 const ProductCard = (props) => {
   const productImgStyle = {
-    height: "50px",
+    top: "200px",
+    height: "100px",
     gridColumn: "1",
+    padding: "0px"
   }
 
   const productNameStyle = {
-    gridColumn: "2"
+    gridColumn: "2",
+    paddingTop: "35px",
+    fontSize: "20px"
   }
 
   const productPriceStyle = {
-    gridColumn: "3"
+    gridColumn: "3",
+    paddingTop: "35px",
+    fontSize: "20px"
+  }
+
+  const productArrowStyle = {
+    height: "25px",
+    width: "auto",
+    padding: "35px 0px 0px 0px"
   }
   //useState and props products/setProducts
   const [products, setProducts] = useState({});
@@ -39,6 +52,9 @@ const ProductCard = (props) => {
         src={props.data.img}/>
       <div style={productNameStyle}>{props.data.name}</div>
       <div style={productPriceStyle}>{productPrice},-</div>
+      <img 
+        src={arrow}
+        style={productArrowStyle}/>
     </Link>
   );
 };

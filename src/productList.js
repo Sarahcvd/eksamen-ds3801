@@ -12,6 +12,8 @@ import latte from "../src/images/latte.png";
 import mocha from "../src/images/mocha.png";
 import oreokake from "../src/images/oreokake.png";
 import scones from "../src/images/scones.png";
+import Cappuccino from "../src/images/cappuccino.cortado.png";
+import Cortado from "../src/images/cappuccino.cortado.png";
 
 const hotDrinks = {
   name: "Varme Drikker",
@@ -52,7 +54,7 @@ const hotDrinks = {
           size: "stor",
         },
       ],
-      img: "",
+      img: Cappuccino,
     },
     {
       id: 3,
@@ -166,7 +168,7 @@ const hotDrinks = {
           size: "stor",
         },
       ],
-      img: "",
+      img: Cortado,
     },
   ],
 };

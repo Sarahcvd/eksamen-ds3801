@@ -15,7 +15,7 @@ const Category = (props) => {
     width: "385px", 
     color: "black",
     padding: "5px",
-    margin: "15px",
+    margin: "5px",
     backgroundColor: "white",
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
   }
