@@ -36,6 +36,7 @@ const App = (props) => {
     <Router>
       {/*accepts values to be passed to ShoppingCart*/}
       <header style={headerStyle}>
+        <a href="/"><p>Home</p></a>
         {/*Title*/}
         <h1 style={headerTitleStyle}>leCafé </h1>
       </header>
