@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Category from "./components/Category";
-import Product from "./components/Product";
+import Home from "./Components/Home";
+import Category from "./Components/Category";
+import Product from "./Components/Product";
 import { hotDrinks, coldDrinks, desserts } from "./productList";
 import { OrderContext } from "../src/orderContext";
 import './styles2.css'

@@ -12,8 +12,20 @@ const Product = (props) => {
   const [selectedType, setSelectedType] = useState("enkel");
   const [count, setCount] = useState(1);
 
+  const productContainerStyle = {
+    gridColumn: "2",
+    display: "inline-grid",
+    gridGap: "15px"
+  }
+
+  const gridItem = {
+    margin: "auto",
+  }
+
   const imageStyle = {
     maxWidth: "100%",
+    width: "200px",
+    margin: "auto"
   };
 
   useEffect(() => {
@@ -46,10 +58,10 @@ const Product = (props) => {
   }
 
   return (
-    <div>
-      <p>{product.name}</p>
+    <div style={productContainerStyle}>
+      <p style={gridItem}>{product.name}</p>
       <img src={product.img} style={imageStyle}></img>
-      <p>{getCorrectPrice()}</p>
+      <p style={gridItem}>kr {getCorrectPrice()},-</p>
 
       {useSizes && (
         <SizeSelector
@@ -62,9 +74,11 @@ const Product = (props) => {
         selectedType={selectedType}
         setSelectedType={setSelectedType}
       />
-      <button onClick={decreaseCount}>-</button>
-      <p>{count}</p>
-      <button onClick={increaseCount}>+</button>
+      <div id="product-count-section">
+        <button style={gridItem} onClick={decreaseCount}>-</button>
+        <p style={gridItem}>{count}</p>
+        <button style={gridItem} onClick={increaseCount}>+</button>
+      </div>
     </div>
   );
 };

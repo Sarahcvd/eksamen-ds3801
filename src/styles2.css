@@ -9,10 +9,6 @@ body{
     -webkit-text-size-adjust: 100%;
 }
 
-h3, h4, h5 {
-    font-weight: normal;
-    color: #8f8f8f;
-}
 
 /* MAIN CONTAINER */
 #root {
@@ -38,4 +34,8 @@ h3, h4, h5 {
     color: black;
     display: grid;
     grid-template-columns: auto auto auto;
+}
+
+#product-count-section{
+    display: grid;
 }

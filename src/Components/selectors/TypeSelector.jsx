@@ -4,12 +4,18 @@ import { useParams } from "react-router-dom";
 const TypeSelector = (props) => {
   //useState and props products/setProducts
 
+  const gridItem = {
+    margin: "auto",
+    boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
+    padding: "15px"
+  }
+
   function handleTypeChange(changeEvent) {
     props.setSelectedType(changeEvent.target.value);
   }
 
   return (
-    <div>
+    <div style={gridItem}>
       <form>
         <div className="radio">
           <label>
