@@ -7,6 +7,29 @@ const CartSummaryBar = (props) => {
   const [itemCount, setItemCount] = useState(0);
   const [totalPrice, setTotalPrice] = useState("");
 
+  const CartSummaryBarStyling = {
+    position: "fixed",
+    backgroundColor: "#AC6E6E", 
+    color: "white",
+    bottom: "0", 
+    display: "grid",
+    gridTemplateColumns: "auto auto auto",
+    width: "100%",
+    padding: "0px 10px"
+  }
+
+  const summaryCountStyle = {
+    backgroundColor: "white",
+    color: "#AC6E6E",
+    width: "fit-content",
+    padding: "5px 10px", 
+    borderRadius: "5px"
+  }
+
+  const summaryTextStyle = {
+    padding: "5px"
+  }
+
   useEffect(() => {
     var count = 0;
     var price = 0;
@@ -17,15 +40,15 @@ const CartSummaryBar = (props) => {
     });
 
     setItemCount(count);
-    setTotalPrice(`kr ${price};-`);
+    setTotalPrice(`kr ${price},-`);
   }, [orders]);
 
   return (
     <Link to={"/Cart"}>
-      <div>
-        <p>{itemCount}</p>
-        <p>Se Din bestilling</p>
-        <p>{totalPrice}</p>
+      <div style={CartSummaryBarStyling}>
+        <p style={summaryCountStyle}>{itemCount}</p>
+        <p style={summaryTextStyle}>Se Din bestilling</p>
+        <p style={summaryTextStyle}>{totalPrice}</p>
       </div>
     </Link>
   );
