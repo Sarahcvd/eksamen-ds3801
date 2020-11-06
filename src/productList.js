@@ -35,6 +35,7 @@ const hotDrinks = {
           size: "stor",
         },
       ],
+      canBeDouble: false,
       img: filterkaffe,
     },
     {
@@ -54,7 +55,8 @@ const hotDrinks = {
           size: "stor",
         },
       ],
-      img: Cappuccino,
+      canBeDouble: true,
+      img: "",
     },
     {
       id: 3,
@@ -73,6 +75,7 @@ const hotDrinks = {
           size: "stor",
         },
       ],
+      canBeDouble: true,
       img: americano,
     },
     {
@@ -92,6 +95,7 @@ const hotDrinks = {
           size: "stor",
         },
       ],
+      canBeDouble: true,
       img: mocha,
     },
     {
@@ -111,6 +115,7 @@ const hotDrinks = {
           size: "stor",
         },
       ],
+      canBeDouble: true,
       img: latte,
     },
     {
@@ -130,6 +135,7 @@ const hotDrinks = {
           size: "stor",
         },
       ],
+      canBeDouble: true,
       img: caramelmacchiato,
     },
     {
@@ -149,6 +155,7 @@ const hotDrinks = {
           size: "stor",
         },
       ],
+      canBeDouble: false,
       img: expresso,
     },
     {
@@ -168,7 +175,8 @@ const hotDrinks = {
           size: "stor",
         },
       ],
-      img: Cortado,
+      canBeDouble: true,
+      img: "",
     },
   ],
 };
@@ -196,6 +204,7 @@ const coldDrinks = {
           size: "stor",
         },
       ],
+      canBeDouble: true,
       img: iskaffe,
     },
     {
@@ -218,6 +227,7 @@ const coldDrinks = {
           size: "stor",
         },
       ],
+      canBeDouble: false,
       img: iskaffe,
     },
   ],
@@ -231,42 +241,49 @@ const desserts = {
       name: "Brownies",
       price: 44,
       img: brownies,
+      canBeDouble: false,
     },
     {
       id: 12,
       name: "Oreokake",
       price: 54,
       img: oreokake,
+      canBeDouble: false,
     },
     {
       id: 13,
       name: "Kanelbolle",
       price: 46,
       img: kanelbolle,
+      canBeDouble: false,
     },
     {
       id: 14,
       name: "Croissant",
       price: 38,
       img: croissant,
+      canBeDouble: false,
     },
     {
       id: 15,
       name: "Chiapudding",
       price: 42,
       img: chiapudding,
+      canBeDouble: false,
     },
     {
       id: 16,
       name: "Brioche",
       price: 44,
       img: brioche,
+      canBeDouble: false,
     },
     {
       id: 17,
       name: "Scones",
       price: 37,
       img: scones,
+      canBeDouble: false,
     },
   ],
 };

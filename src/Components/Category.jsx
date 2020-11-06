@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import '../styles2.css'
+import CartSummaryBar from "./CartSummaryBar";
 
 const Category = (props) => {
   const categoryLiContainerStyle = {
@@ -29,7 +30,12 @@ const Category = (props) => {
       key={item.id}>{<ProductCard data={item} />}</li>
   ));
 
-  return <div style={categoryLiContainerStyle}>{listItems}</div>;
+  return (
+  <div style={categoryLiContainerStyle}>
+    <ul>{listItems}</ul>
+    <CartSummaryBar />
+  </div>
+    );
 };
 
 //Export module

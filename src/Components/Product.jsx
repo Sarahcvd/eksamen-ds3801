@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { useParams, useHistory } from "react-router-dom";
+import { OrderContext } from "../orderContext";
 import SizeSelector from "./selectors/SizeSelector";
 import TypeSelector from "./selectors/TypeSelector";
 
@@ -11,6 +12,8 @@ const Product = (props) => {
   const [selectedSize, setSelectedSize] = useState("liten");
   const [selectedType, setSelectedType] = useState("enkel");
   const [count, setCount] = useState(1);
+  const { orders, setOrders } = useContext(OrderContext);
+  let history = useHistory();
 
   const productContainerStyle = {
     gridColumn: "2",
@@ -33,7 +36,6 @@ const Product = (props) => {
       (x) => x.id.toString() === productId
     );
     if (p.size) {
-      console.log(p.size);
       setUseSizes(true);
     }
     setProduct(p);
@@ -57,6 +59,39 @@ const Product = (props) => {
     }
   }
 
+  function addOrderToCart() {
+    var newOrder = {
+      count: count,
+      size: useSizes ? selectedSize : null,
+      type: product.canBeDouble ? selectedType : null,
+      price: getCorrectPrice() + (selectedType === "dobbel" ? 10 : 0),
+      name: product.name,
+      id: product.id,
+    };
+
+    const newProductList = [];
+    console.log(orders);
+
+    if (orders != null) {
+      orders.forEach((order) => {
+        if (
+          order.size === newOrder.size &&
+          order.id === newOrder.id &&
+          order.type === newOrder.type
+        ) {
+          newOrder.count += order.count;
+        } else {
+          newProductList.push(order);
+        }
+      });
+    }
+
+    newProductList.push(newOrder);
+
+    setOrders(newProductList);
+    history.goBack();
+  }
+
   return (
     <div style={productContainerStyle}>
       <p style={gridItem}>{product.name}</p>
@@ -78,6 +113,7 @@ const Product = (props) => {
         <button style={gridItem} onClick={decreaseCount}>-</button>
         <p style={gridItem}>{count}</p>
         <button style={gridItem} onClick={increaseCount}>+</button>
+        <button onClick={addOrderToCart}>Legg til</button>
       </div>
     </div>
   );
