@@ -9,11 +9,11 @@ import { OrderContext } from "./orderContext";
 
 const App = (props) => {
   const headerStyle = {
+    margin: "0",
     gridRow: "1",
     gridColumn: "1 /span 3",
     display: "grid",
-    gridTemplateColumns: "auto auto auto",
-    width: "100%",
+    gridTemplateColumns: "auto auto auto auto",
     fontWeight: "bold"
   }
 

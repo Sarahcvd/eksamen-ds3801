@@ -56,7 +56,7 @@ const hotDrinks = {
         },
       ],
       canBeDouble: true,
-      img: "",
+      img: Cappuccino,
     },
     {
       id: 3,
@@ -176,7 +176,7 @@ const hotDrinks = {
         },
       ],
       canBeDouble: true,
-      img: "",
+      img: Cortado,
     },
   ],
 };

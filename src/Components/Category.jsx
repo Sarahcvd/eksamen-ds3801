@@ -7,18 +7,22 @@ import CartSummaryBar from "./CartSummaryBar";
 
 const Category = (props) => {
   const categoryLiContainerStyle = {
+    margin: "auto",
+    padding: "5px",
     gridColumn: "1 /span 3",
-    display: "grid"
+    display: "grid",
   }
+
   const categoryLiStyle = {
     listStyleType: "none",
     borderRadius: "5px",
-    width: "385px", 
+    width: "auto", 
     color: "black",
     padding: "5px",
     margin: "5px",
     backgroundColor: "white",
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
+    
   }
   //useState and props products/setProducts
   const [products, setProducts] = useState({});
@@ -31,8 +35,10 @@ const Category = (props) => {
   ));
 
   return (
-  <div style={categoryLiContainerStyle}>
-    <ul>{listItems}</ul>
+  <div >
+    <ul className="product-list" style={categoryLiContainerStyle}>
+      {listItems}
+    </ul>
     <CartSummaryBar />
   </div>
     );

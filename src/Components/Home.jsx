@@ -5,8 +5,9 @@ import dessertImage from "../images/desserter.jpeg";
 
 const Home = (props) => {
   const menuContainerStyle = {
+    margin: "auto",
     gridRow: "2",
-    gridColumn: "1/span 3",
+    gridColumn: "1/span 2",
     display: "grid",
     gridTemplateRows: "auto auto auto"
   }

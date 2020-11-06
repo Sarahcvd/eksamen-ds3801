@@ -5,8 +5,7 @@ import arrow from "../images/arrow.png";
 
 const ProductCard = (props) => {
   const productImgStyle = {
-    top: "200px",
-    height: "100px",
+    height: "80px",
     gridColumn: "1",
     padding: "0px"
   }
