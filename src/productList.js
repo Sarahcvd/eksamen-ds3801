@@ -14,6 +14,7 @@ import oreokake from "../src/images/oreokake.png";
 import scones from "../src/images/scones.png";
 import Cappuccino from "../src/images/cappuccino.cortado.png";
 import Cortado from "../src/images/cappuccino.cortado.png";
+import iste from "../src/images/iste.png";
 
 const hotDrinks = {
   name: "Varme Drikker",
@@ -228,7 +229,7 @@ const coldDrinks = {
         },
       ],
       canBeDouble: false,
-      img: iskaffe,
+      img: iste,
     },
   ],
 };
