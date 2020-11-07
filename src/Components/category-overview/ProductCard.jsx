@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import '../styles2.css';
-import arrow from "../images/arrow.png";
+import { Link } from "react-router-dom";
+import '../../styles2.css';
+import arrow from "../../images/arrow.png";
 
 const ProductCard = (props) => {
   const productImgStyle = {
@@ -28,8 +28,6 @@ const ProductCard = (props) => {
     padding: "35px 0px 0px 0px"
   }
   //useState and props products/setProducts
-  const [products, setProducts] = useState({});
-  const [currentOrders, setCurrentOrders] = useState([]);
   const [productPrice, setProductPrice] = useState(0);
 
   useEffect(() => {

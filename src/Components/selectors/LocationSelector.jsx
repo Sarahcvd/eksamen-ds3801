@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React from "react";
 import sitteHer from "../../images/sitteHer.png"
 import taMed from "../../images/taMed.png"
 

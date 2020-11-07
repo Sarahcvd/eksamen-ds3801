@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { OrderContext } from "../orderContext";
+import { OrderContext } from "../../orderContext";
 
 const CartSummaryBar = (props) => {
   const { orders, setOrders } = useContext(OrderContext);

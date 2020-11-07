@@ -3,4 +3,6 @@ export default class Order {
     size;
     count;
     price;
+    type;
+    id;
   }

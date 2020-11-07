@@ -1,9 +1,7 @@
-
-import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React from "react";
 import ProductCard from "./ProductCard";
-import '../styles2.css'
 import CartSummaryBar from "./CartSummaryBar";
+import '../../styles2.css'
 
 const Category = (props) => {
   const categoryLiContainerStyle = {
@@ -24,8 +22,6 @@ const Category = (props) => {
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
     
   }
-  //useState and props products/setProducts
-  const [products, setProducts] = useState({});
 
   const listItems = props.productList.items.map((item) => (
     <li 
@@ -35,7 +31,7 @@ const Category = (props) => {
   ));
 
   return (
-  <div >
+  <div>
     <ul className="product-list" style={categoryLiContainerStyle}>
       {listItems}
     </ul>

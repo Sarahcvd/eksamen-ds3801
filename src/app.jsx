@@ -1,11 +1,13 @@
 import React, { useMemo, useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./Components/Home";
-import Category from "./Components/Category";
+import Category from "./Components/category-overview/Category";
 import Product from "./Components/Product";
-import Cart from "./Components/Cart";
+import Cart from "./Components/cart/Cart";
+import OrderHistory from "./Components/order-history/OrderHistory";
 import { hotDrinks, coldDrinks, desserts } from "./productList";
 import { OrderContext } from "./orderContext";
+import { HistoryContext } from "./historyContext";
 
 const App = (props) => {
   const headerStyle = {
@@ -25,17 +27,23 @@ const App = (props) => {
     color: "white",
   }
 
-  const homeStyleLink = {
+  const homeLinkStyle = {
     textDecoration: "none"
   }
 
   //useState and props products/setProducts
 
   const [orders, setOrders] = useState([]);
+  const [orderHistory, setOrderHistory] = useState([]);
 
   const providerValue = useMemo(() => ({ orders, setOrders }), [
     orders,
     setOrders,
+  ]);
+
+  const historyValue = useMemo(() => ({ orderHistory, setOrderHistory }), [
+    orderHistory,
+    setOrderHistory,
   ]);
 
   return (
@@ -44,36 +52,46 @@ const App = (props) => {
       <header style={headerStyle}>
         <a href="/"><p>Home</p></a>
         {/*Title*/}
-        <a href="/" style={homeStyleLink}> <h1 style={headerTitleStyle}>leCafé </h1></a> 
+        <a href="/" style={homeLinkStyle}> <h1 style={headerTitleStyle}>leCafé </h1></a> 
+        <Link to={"/History"}>
+          <div>
+            <p>Order History</p>
+          </div>
+        </Link>
       </header>
 
       {/*Switch route path*/}
       <Switch>
         <OrderContext.Provider value={providerValue}>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/Cart">
-            <Cart />
-          </Route>
-          <Route exact path="/HotDrinks/">
-            <Category productList={hotDrinks} />
-          </Route>
-          <Route exact path="/ColdDrinks/">
-            <Category productList={coldDrinks} />
-          </Route>
-          <Route exact path="/Desserts/">
-            <Category productList={desserts} />
-          </Route>
-          <Route path="/HotDrinks/:productId/">
-            <Product productList={hotDrinks} />
-          </Route>
-          <Route path="/ColdDrinks/:productId/">
-            <Product productList={coldDrinks} />
-          </Route>
-          <Route path="/Desserts/:productId/">
-            <Product productList={desserts} />
-          </Route>
+          <HistoryContext.Provider value={historyValue}>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/Cart">
+              <Cart />
+            </Route>
+            <Route path="/History">
+              <OrderHistory />
+            </Route>
+            <Route exact path="/HotDrinks/">
+              <Category productList={hotDrinks} />
+            </Route>
+            <Route exact path="/ColdDrinks/">
+              <Category productList={coldDrinks} />
+            </Route>
+            <Route exact path="/Desserts/">
+              <Category productList={desserts} />
+            </Route>
+            <Route path="/HotDrinks/:productId/">
+              <Product productList={hotDrinks} />
+            </Route>
+            <Route path="/ColdDrinks/:productId/">
+              <Product productList={coldDrinks} />
+            </Route>
+            <Route path="/Desserts/:productId/">
+              <Product productList={desserts} />
+            </Route>
+          </HistoryContext.Provider>
         </OrderContext.Provider>
       </Switch>
     </Router>

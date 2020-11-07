@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { OrderContext } from "../orderContext";
-import { Link } from "react-router-dom";
+import { OrderContext } from "../../orderContext";
 
 const OrderCard = (props) => {
   //useState and props products/setProducts
@@ -43,8 +42,7 @@ const OrderCard = (props) => {
       if (
         order.size === props.data.size &&
         order.id === props.data.id &&
-        order.type === props.data.type &&
-        order.img === props.data.img
+        order.type === props.data.type
       ) {
         newOrderList.push(newOrder);
       } else {
@@ -106,10 +104,6 @@ const OrderCard = (props) => {
 
   return (
     <div style={cardContainer}>
-      <img
-        style={imgStyle}
-        src={props.data.img}
-      />
       <div style={cardTextStyle}>{props.data.name}</div>
       <div style={cardSizeText}>{`${props.data.size} | kr ${
         props.data.price * props.data.count
