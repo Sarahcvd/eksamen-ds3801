@@ -40,7 +40,7 @@ const Cart = (props) => {
 
   const shoppingCartContainerStyle = {
     margin: "auto",
-    gridColumn: "1 /span 3", 
+    gridColumn: "2", 
     padding: "10px"
   }
 
@@ -48,14 +48,14 @@ const Cart = (props) => {
     borderRadius: "5px",
     color: "black",
     padding: "5px",
-    margin: "15px",
+    margin: "auto",
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
   }
 
   const ulStyle = {
     listStyleType: "none",
     padding: "0",
-    margin: "0"
+    marginTop: "15px"
   }
   const priceStyle = {
     margin: "auto", 
@@ -67,7 +67,7 @@ const Cart = (props) => {
     color: "white", 
     width: "100%", 
     textAlign: "center", 
-    padding: "10px", 
+    padding: "10px 0px", 
     borderRadius:"5px",
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
   }
@@ -77,7 +77,7 @@ const Cart = (props) => {
     color: "white", 
     width: "100%", 
     textAlign: "center", 
-    padding: "10px", 
+    padding: "10px 0px", 
     borderRadius: "5px",
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
   }
@@ -101,7 +101,6 @@ const Cart = (props) => {
     backgroundColor: "White",
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
     borderRadius: "5px",
-    padding: "5px",
     margin: "5px",
     color: "black",
     padding: "20px 0px"
