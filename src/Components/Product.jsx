@@ -41,6 +41,57 @@ const Product = (props) => {
     left: "-0px"
   }
 
+  const productCountSectionStyle = {
+    displat: "grid",
+    gridTemplateRows: "auto auto",
+    margin: "auto", 
+    fontSize: "xx-large",
+    padding: "5px"
+  }
+
+  const countSectionStyle = {
+    display: "grid",
+    gridTemplateColumns: "auto auto auto",
+    gridGap:"15px"
+  }
+
+  const decreaseCountStyle = {
+    gridColumn: "1",
+    textAlign:"center",
+    backgroundColor: "#815757",
+    borderRadius: "5px",
+    width: "25px", 
+    color: "white",
+    padding: "5px"
+  }
+
+  const countStyle = {
+    gridColumn: "2",
+    textAlign: "center",
+    backgroundColor: "#815757",
+    borderRadius: "5px",
+    width: "25px", 
+    color: "white",
+    padding: "5px"
+  }
+
+  const increaseCountStyle = {
+    gridColumn: "3",
+    textAlign: "center",
+    backgroundColor: "#815757",
+    borderRadius: "5px",
+    width: "25px", 
+    color: "white", 
+    padding: "5px"
+  }
+
+  const addBtnStyle = {
+    gridRow: "2",
+    textAlign: "center",
+    boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
+    padding: "5px"
+  }
+
   useEffect(() => {
     const p = props.productList.items.find(
       (x) => x.id.toString() === productId
@@ -120,11 +171,13 @@ const Product = (props) => {
         selectedType={selectedType}
         setSelectedType={setSelectedType}
       />
-      <div id="product-count-section">
-        <button style={gridItem} onClick={decreaseCount}>-</button>
-        <p style={gridItem}>{count}</p>
-        <button style={gridItem} onClick={increaseCount}>+</button>
-        <button onClick={addOrderToCart}>Legg til</button>
+      <div style={productCountSectionStyle}>
+        <div style={countSectionStyle}>
+          <p style={decreaseCountStyle} onClick={decreaseCount}>-</p>
+          <p style={countStyle}>{count}</p>
+          <p style={increaseCountStyle} onClick={increaseCount}>+</p>
+        </div>
+        <div style={addBtnStyle} onClick={addOrderToCart}>Legg til</div>
       </div>
     </div>
   );
