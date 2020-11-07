@@ -6,9 +6,10 @@ import '../../styles2.css'
 const Category = (props) => {
   const categoryLiContainerStyle = {
     margin: "auto",
-    padding: "5px",
-    gridColumn: "1 /span 3",
+    gridRow: "2",
+    gridColumn: "2 /span 6",
     display: "grid",
+    gridTemplateRows: "auto auto auto"
   }
 
   const categoryLiStyle = {
