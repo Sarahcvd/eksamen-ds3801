@@ -15,9 +15,10 @@ const App = (props) => {
     gridRow: "1",
     gridColumn: "1 /span 3",
     display: "grid",
-    gridTemplateColumns: "auto auto auto auto",
+    gridTemplateColumns: "auto auto auto",
     fontWeight: "bold",
-    backgroundColor: "#815757"
+    backgroundColor: "#815757", 
+    width: "100%"
   }
 
   const headerTitleStyle = {

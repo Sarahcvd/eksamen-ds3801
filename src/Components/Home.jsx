@@ -10,18 +10,17 @@ const Home = (props) => {
   const menuContainerStyle = {
     margin: "auto",
     gridRow: "2",
-    gridColumn: "1 /span 2",
+    gridColumn: "1 /span 3",
     display: "grid",
     gridTemplateRows: "auto auto auto"
   }
   const imageLinkStyle = {
     maxWidth: "100%",
+    width:"340px",
     borderRadius: "15px",
     padding: "5px",
     margin: "10px",
-    cursor: "pointer",
     transition: "0.4s",
-    width: "375px",
     gridColumn: "1 /span 3"
   };
 

@@ -32,8 +32,7 @@ const Cart = (props) => {
 
   const shoppingCartContainerStyle = {
     margin: "auto",
-    width: "100%", 
-    gridColumn: "1 /span 2", 
+    gridColumn: "1 /span 3", 
     padding: "10px"
   }
 
@@ -51,7 +50,8 @@ const Cart = (props) => {
     margin: "0"
   }
   const priceStyle = {
-    margin: "auto"
+    margin: "auto", 
+    borderBottom: "1px solid grey"
   }
 
   const payStyle = {
@@ -103,8 +103,8 @@ const Cart = (props) => {
           selectedLocation={selectedLocation}
           setSelectedLocation={setSelectedLocation}
         />
-        <p style= {priceStyle}>{`Totalpris: ${getTotalPrice()}`}</p>
-        <div style={payStyle} onClick={confirmOrder}>Betal</div>
+        <p style= {priceStyle}>{`Totalpris: ${getTotalPrice()}`}</p><br/>
+        <div style={payStyle} onClick={confirmOrder}>Betal</div><br/>
         <div style={payVippsStyle}>Betal med Vipps</div>
       </div>
     );
