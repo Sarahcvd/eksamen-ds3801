@@ -98,6 +98,11 @@ const Cart = (props) => {
 
   }
 
+  const linkstyle = {
+
+    textDecoration: "none",
+  }
+
 
   function confirmOrder() {
     setOrderConfirmed(true);
@@ -139,10 +144,10 @@ const Cart = (props) => {
         <img src={logoImage} style={logoStyle}></img> 
         <p>Takk for din bestilling</p>
         <img src={checkmarkImage} style={checkmarkStyle}></img>
-        <Link to={"/"}>
+        <Link to={"/"} style={linkstyle}>
           <p style={stylebtn}>Tilbake til forsiden</p>
         </Link>
-        <Link to={"/History"}>
+        <Link to={"/History"} style={linkstyle}>
           <p style={stylebtn}>Se orderehistorikk</p>
         </Link>
       </div>
