@@ -3,15 +3,16 @@ import varmeDrikkerImage from "../images/varmeDrikker.jpg";
 import kaldeDrikkerImage from "../images/kaldeDrikker.jpg";
 import dessertImage from "../images/desserter.jpeg";
 
+
 const Home = (props) => {
+
   const menuContainerStyle = {
     margin: "auto",
     gridRow: "2",
-    gridColumn: "1/span 2",
+    gridColumn: "1 /span 2",
     display: "grid",
     gridTemplateRows: "auto auto auto"
   }
-
   const imageLinkStyle = {
     maxWidth: "100%",
     borderRadius: "15px",
@@ -29,57 +30,65 @@ const Home = (props) => {
     fontSize: "x-large",
     fontWeight: "bold",
     position: "absolute",
-    cursor: "pointer",
     padding: "25px"
   }
 
   //useState and props products/setProducts
   return (
-    <div style={menuContainerStyle}>
-      <p
-        style={titleStyle}
-        onClick={() => {
-          window.location.href = "/HotDrinks/";
-        }}
-        >Varme Drikker</p>
-      <img
+    <div className="menu-container" 
+      style={menuContainerStyle}
+    >
+      <div id="hot-drink-container">
+        <p
+          id="hot-drinks-title"
+          style={titleStyle}
+          onClick={() => {
+            window.location.href = "/HotDrinks/";
+          }}
+          >Varme Drikker</p>
+        <img className="hot-drinks-image"
+          style={imageLinkStyle}
+          src={varmeDrikkerImage}
+          alt={"Varme Drikker"}
+          onClick={() => {
+            window.location.href = "/HotDrinks/";
+          }}
+        />
+      </div>
+      <div id="cold-drink-container">
+        <p
+          id="cold-drinks-title"
+          style={titleStyle}
+          onClick={() => {
+            window.location.href = "/ColdDrinks/";
+          }}
+        >Kalde Drikker</p>
+        <img className="cold-drinks-image"
+          style={imageLinkStyle}
+          src={kaldeDrikkerImage}
+          alt={"Kalde Drikker"}
+          onClick={() => {
+            window.location.href = "/ColdDrinks/";
+          }}
+        />
+      </div>
+      <div id="dessert-container">
+        <p 
+          id="desserts-title"
+          style={titleStyle}
+          onClick={() => {
+            window.location.href = "/Desserts/";
+          }}
+        >Desserter</p>
+        <img className="desserts-image"
         style={imageLinkStyle}
-        src={varmeDrikkerImage}
-        alt={"Varme Drikker"}
-        onClick={() => {
-          window.location.href = "/HotDrinks/";
-        }}
-      />
-      <p
-        id="cold-drinks-title"
-        style={titleStyle}
-        onClick={() => {
-          window.location.href = "/ColdDrinks/";
-        }}
-      >Kalde Drikker</p>
-      <img
-        style={imageLinkStyle}
-        src={kaldeDrikkerImage}
-        alt={"Kalde Drikker"}
-        onClick={() => {
-          window.location.href = "/ColdDrinks/";
-        }}
-      />
-      <p 
-        id="desserts-title"
-        style={titleStyle}
-        onClick={() => {
-          window.location.href = "/Desserts/";
-        }}
-      >Desserter</p>
-      <img
-        style={imageLinkStyle}
-        src={dessertImage}
-        alt={"Desserter"}
-        onClick={() => {
-          window.location.href = "/Desserts/";
-        }}
-      />
+          src={dessertImage}
+          alt={"Desserter"}
+          onClick={() => {
+            window.location.href = "/Desserts/";
+          }}
+        />
+      </div>
     </div>
   );
 };

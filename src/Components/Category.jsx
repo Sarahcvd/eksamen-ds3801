@@ -15,7 +15,7 @@ const Category = (props) => {
 
   const categoryLiStyle = {
     listStyleType: "none",
-    borderRadius: "5px",
+    borderRadius: "10px",
     width: "auto", 
     color: "black",
     padding: "5px",
