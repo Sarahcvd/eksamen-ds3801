@@ -24,8 +24,17 @@ const ProductCard = (props) => {
 
   const productArrowStyle = {
     height: "25px",
-    width: "auto",
-    padding: "35px 0px 0px 0px"
+    padding: "35px 10px 35px 0px"
+  }
+
+  const productOutputCard = {
+    textDecoration: "none",
+    color: "black",
+    display: "grid",
+    gridTemplateColumns: "auto auto auto auto",
+    height: "100px",
+    textAlign: "left",
+    gridGap: "5px"
   }
   //useState and props products/setProducts
   const [productPrice, setProductPrice] = useState(0);
@@ -42,16 +51,26 @@ const ProductCard = (props) => {
     window.location.href += `/${props.data.id}`;
   }
 
+  
+
   return (
-    <Link to={`${props.data.id}/`} id="product-output">
+    <Link to={`${props.data.id}/`} style={productOutputCard}>
       <img 
         style={productImgStyle}
         src={props.data.img}/>
-      <div className="product-name-style" style={productNameStyle}>{props.data.name}</div>
-      <div className="product-price-style" style={productPriceStyle}>{productPrice},-</div>
-      <img className="product-arrow-style" 
-        src={arrow}
-        style={productArrowStyle}/>
+        <div 
+          className="product-name-style" 
+          style={productNameStyle}>{props.data.name}
+        </div>
+        <div 
+          className="product-price-style" 
+          style={productPriceStyle}>{productPrice},-
+        </div>
+        <img 
+          className="product-arrow-style" 
+          src={arrow}
+          style={productArrowStyle}
+        />
     </Link>
   );
 };

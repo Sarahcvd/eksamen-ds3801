@@ -32,16 +32,6 @@ div{
 
 /* PRODUCT CARD */
 
-#product-output{   
-    text-decoration: none;
-    color: black;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    height: 100px;
-    text-align: left;
-    grid-gap: 5px;
-}
-
 [type=radio]:checked + img {
     box-shadow: 0 0 0 2pt #815757;
     padding: 3px;

@@ -11,7 +11,7 @@ const Category = (props) => {
     gridColumn: "2 /span 6",
     display: "grid",
     gridTemplateRows: "auto auto auto",
-    padding:"5px"
+    paddingLeft:"4%"
   }
 
   const categoryLiStyle = {
