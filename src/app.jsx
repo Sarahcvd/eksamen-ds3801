@@ -22,7 +22,7 @@ const App = (props) => {
     textAlign: "center",
     gridColumn: "2 / span 1",
     fontSize: "30px",
-    color: "#AC6E6E",
+    color: "white",
   }
 
   const homeStyleLink = {
