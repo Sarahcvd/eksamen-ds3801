@@ -75,6 +75,7 @@ const OrderCard = (props) => {
     height: "fit-content",
     color: "#815757", 
     fontWeight: "bold",
+    width: "15px"
     
   }
 
@@ -87,7 +88,8 @@ const OrderCard = (props) => {
   const cardSizeText = {
     padding: "10px",
     gridRow: "2", 
-    gridColumn: "2"
+    gridColumn: "2", 
+    color: "grey"
   }
 
   const countStyle = {

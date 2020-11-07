@@ -24,18 +24,46 @@ const Cart = (props) => {
     margin: "auto",
     width: "100%", 
     gridColumn: "1 /span 2", 
-    
+    padding: "10px"
   }
 
   const orderCardStyle = {
-    listStyleType: "none",
+    
     borderRadius: "5px",
     color: "black",
     padding: "5px",
-    margin: "5px",
+    margin: "15px",
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
   }
 
+  const ulStyle = {
+    listStyleType: "none",
+    padding: "0",
+    margin: "0"
+  }
+  const priceStyle = {
+    margin: "auto"
+  }
+
+  const payStyle = {
+    backgroundColor: "black", 
+    color: "white", 
+    width: "100%", 
+    textAlign: "center", 
+    padding: "10px", 
+    borderRadius:"5px",
+    boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
+  }
+
+  const payVippsStyle = {
+    backgroundColor: "#FF4B00", 
+    color: "white", 
+    width: "100%", 
+    textAlign: "center", 
+    padding: "10px", 
+    borderRadius: "5px",
+    boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
+  }
 
   const orderList = orders.map((order) => (
     <li 
@@ -46,16 +74,17 @@ const Cart = (props) => {
 
   return (
     <div style={shoppingCartContainerStyle}>
-      {orders.length > 0 && <ul>{orderList}</ul>}
+      <h4>Fullfør din bestilling:</h4>
+      {orders.length > 0 && <ul style={ulStyle}>{orderList}</ul>}
       {orders.length === 0 && <p>Ingen varer lagt til</p>}
 
       <LocationSelector
         selectedLocation={selectedLocation}
         setSelectedLocation={setSelectedLocation}
       />
-      <p>{`Totalpris: ${getTotalPrice()}`}</p>
-      <button>Betal</button>
-      <button>Betal med Vipps</button>
+      <p style= {priceStyle}>{`Totalpris: kr. ${getTotalPrice()},-`}</p><br/>
+      <div style={payStyle}>Betal</div><br/>
+      <div style={payVippsStyle}>Betal med Vipps</div>
     </div>
   );
 };

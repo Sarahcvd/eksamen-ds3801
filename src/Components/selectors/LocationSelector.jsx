@@ -43,7 +43,8 @@ const LocationSelector = (props) => {
   const imgStyle = {
     height: "50px",
     borderRadius: "100%", 
-    padding: "5px"
+    padding: "5px",
+    boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
   }
 
   return (
