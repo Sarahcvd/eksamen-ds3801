@@ -23,12 +23,20 @@ const Cart = (props) => {
   }
 
   const logoStyle = {
-    maxWidth: "90%",
+    maxWidth: "50%",
+    margin: "auto"
   };
 
   const checkmarkStyle = {
-    maxWidth: "50%",
+    maxWidth: "100%",
+    gridColumn: "1",
   };
+
+  const checkmarkText = {
+    gridColumn: "2",
+    textAlign: "center",
+    paddingTop: "20px"
+  }
 
   const shoppingCartContainerStyle = {
     margin: "auto",
@@ -74,6 +82,35 @@ const Cart = (props) => {
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
   }
 
+
+  const orderFinishedStyle = {
+    margin: "auto",
+    gridColumn:"2",
+    gridRow:"2",
+    display: "grid"
+  }
+
+  const checkmarkTextContainer = {
+    display: "grid",
+    gridTemplateColumns: "auto auto",
+    padding: "50px 0px"
+  }
+
+  const stylebtn = {
+    textAlign: "center",
+    backgroundColor: "White",
+    boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
+    borderRadius: "5px",
+    padding: "5px",
+    margin: "5px",
+    color: "black",
+    padding: "20px 0px"
+  }
+
+  const linkstyle = {
+    textDecoration: "none",
+  }
+
   const coverStyle = {
     backgroundColor: "#815757",
     width: "100px",
@@ -83,6 +120,7 @@ const Cart = (props) => {
     top: "-20px", 
     left: "-0px"
   }
+
 
   function confirmOrder() {
     setOrderConfirmed(true);
@@ -121,17 +159,18 @@ const Cart = (props) => {
     );
   } else {
     return (
-      <div>
+      <div style={orderFinishedStyle}>
         <p style={coverStyle}></p>
-        <img src={logoImage} style={logoStyle}></img>
-        <h1>Takk!</h1>
-        <p>Jævlig nice at du kjøpte fra oss a dawg. Sykt smud lxm.</p>
-        <img src={checkmarkImage} style={checkmarkStyle}></img>
-        <Link to={"/"}>
-          <p>Tilbake til forsiden</p>
+        <img src={logoImage} style={logoStyle}></img> 
+        <div style={checkmarkTextContainer}>
+          <img src={checkmarkImage} style={checkmarkStyle}></img>
+          <p style={checkmarkText}>Takk for din bestilling</p>
+        </div>
+        <Link to={"/"} style={linkstyle}>
+          <p style={stylebtn}>Tilbake til forsiden</p>
         </Link>
-        <Link to={"/History"}>
-          <p>Se orderehistorikk</p>
+        <Link to={"/History"} style={linkstyle}>
+          <p style={stylebtn}>Se orderehistorikk</p>
         </Link>
       </div>
     );
