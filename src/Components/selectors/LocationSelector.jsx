@@ -8,9 +8,22 @@ const LocationSelector = (props) => {
     props.setSelectedLocation(changeEvent.target.value);
   }
 
+  const locationContainerStyle = {
+    margin: "auto",
+    borderRadius: "5px",
+    color: "black",
+    padding: "5px",
+    boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
+  }
+
+  const formStyle = {
+    margin: "auto", 
+    width: "fit-content", 
+  }
+
   return (
-    <div>
-      <form>
+    <div style={locationContainerStyle}>
+      <form style={formStyle}>
         <div className="radio">
           <label>
             <input
