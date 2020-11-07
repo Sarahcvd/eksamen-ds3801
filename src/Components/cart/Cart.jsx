@@ -23,11 +23,13 @@ const Cart = (props) => {
   }
 
   const logoStyle = {
-    maxWidth: "90%",
+    maxWidth: "50%",
+    
   };
 
   const checkmarkStyle = {
-    maxWidth: "50%",
+    maxWidth: "30%",
+    gridColumn: "1",
   };
 
   const shoppingCartContainerStyle = {
@@ -74,6 +76,29 @@ const Cart = (props) => {
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
   }
 
+  const orderhistorystyle = {
+    margin: "auto",
+    gridColumn:" 3 ",
+    gridRow:"4"
+  
+  }
+
+  const stylebtn = {
+
+    textDecoration: "none",
+    gridColumn: "1",
+    textAlign: "center",
+    height: "50px",
+    with: "50px",
+    backgroundColor: "White",
+    boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
+    borderRadius: "10px",
+    padding: "5px",
+    margin: "5px",
+
+  }
+
+
   function confirmOrder() {
     setOrderConfirmed(true);
     const newOrderHistory = {
@@ -110,16 +135,15 @@ const Cart = (props) => {
     );
   } else {
     return (
-      <div>
-        <img src={logoImage} style={logoStyle}></img>
-        <h1>Takk!</h1>
-        <p>Jævlig nice at du kjøpte fra oss a dawg. Sykt smud lxm.</p>
+      <div style={orderhistorystyle}>
+        <img src={logoImage} style={logoStyle}></img> 
+        <p>Takk for din bestilling</p>
         <img src={checkmarkImage} style={checkmarkStyle}></img>
         <Link to={"/"}>
-          <p>Tilbake til forsiden</p>
+          <p style={stylebtn}>Tilbake til forsiden</p>
         </Link>
         <Link to={"/History"}>
-          <p>Se orderehistorikk</p>
+          <p style={stylebtn}>Se orderehistorikk</p>
         </Link>
       </div>
     );
