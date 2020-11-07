@@ -20,7 +20,11 @@ const App = (props) => {
   const headerTitleStyle = {
     textAlign: "center",
     gridColumn: "2 / span 1",
-    color: "#AC6E6E"
+    color: "#AC6E6E",
+  }
+
+  const homeStyleLink = {
+    textDecoration: "none"
   }
 
   //useState and props products/setProducts
@@ -38,7 +42,7 @@ const App = (props) => {
       <header style={headerStyle}>
         <a href="/"><p>Home</p></a>
         {/*Title*/}
-        <h1 style={headerTitleStyle}>leCafé </h1>
+        <a href="/" style={homeStyleLink}> <h1 style={headerTitleStyle}>leCafé </h1></a> 
       </header>
 
       {/*Switch route path*/}
