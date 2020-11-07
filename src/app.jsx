@@ -14,12 +14,15 @@ const App = (props) => {
     gridColumn: "1 /span 3",
     display: "grid",
     gridTemplateColumns: "auto auto auto auto",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    backgroundColor: "#815757"
   }
 
   const headerTitleStyle = {
     textAlign: "center",
     gridColumn: "2 / span 1",
+    color: "white",
+    fontSize: "30px"
     color: "#AC6E6E",
   }
 

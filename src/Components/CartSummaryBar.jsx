@@ -9,7 +9,7 @@ const CartSummaryBar = (props) => {
 
   const CartSummaryBarStyling = {
     position: "fixed",
-    backgroundColor: "#AC6E6E", 
+    backgroundColor: "#815757", 
     color: "white",
     bottom: "0", 
     display: "grid",
@@ -20,7 +20,7 @@ const CartSummaryBar = (props) => {
 
   const summaryCountStyle = {
     backgroundColor: "white",
-    color: "#AC6E6E",
+    color: "#815757",
     width: "fit-content",
     padding: "5px 10px", 
     borderRadius: "5px"
