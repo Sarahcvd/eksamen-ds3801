@@ -36,45 +36,42 @@ const Home = (props) => {
 
   //useState and props products/setProducts
   return (
-    <div>
-      <Link to={"/HotDrinks/"}>
-        <div id="hot-drink-container">
-          <p
-            id="hot-drinks-title"
-            style={titleStyle}
-            >Varme Drikker</p>
-          <img className="hot-drinks-image"
-            style={imageLinkStyle}
-            src={varmeDrikkerImage}
-            alt={"Varme Drikker"}
-          />
-        </div>
+    <div 
+      className="menu-container"
+      style={menuContainerStyle}
+    >
+      <Link to={"/HotDrinks/"} id="hot-drink-container">
+        <p
+          id="hot-drinks-title"
+          style={titleStyle}
+          >Varme Drikker</p>
+        <img className="hot-drinks-image"
+          style={imageLinkStyle}
+          src={varmeDrikkerImage}
+          alt={"Varme Drikker"}
+        />
       </Link>
-      <Link to={"/ColdDrinks/"}>
-        <div id="cold-drink-container">
-          <p
-            id="cold-drinks-title"
-            style={titleStyle}
-          >Kalde Drikker</p>
-          <img className="cold-drinks-image"
-            style={imageLinkStyle}
-            src={kaldeDrikkerImage}
-            alt={"Kalde Drikker"}
-          />
-        </div>
+      <Link to={"/ColdDrinks/"} id="cold-drink-container">
+        <p
+          id="cold-drinks-title"
+          style={titleStyle}
+        >Kalde Drikker</p>
+        <img className="cold-drinks-image"
+          style={imageLinkStyle}
+          src={kaldeDrikkerImage}
+          alt={"Kalde Drikker"}
+        />
       </Link>
-      <Link to={"/Desserts/"}>
-        <div id="dessert-container">
-          <p 
-            id="desserts-title"
-            style={titleStyle}
-          >Desserter</p>
-          <img className="desserts-image"
-            style={imageLinkStyle}
-            src={dessertImage}
-            alt={"Desserter"}
-          />
-        </div>
+      <Link to={"/Desserts/"} id="dessert-container">
+        <p 
+          id="desserts-title"
+          style={titleStyle}
+        >Desserter</p>
+        <img className="desserts-image"
+          style={imageLinkStyle}
+          src={dessertImage}
+          alt={"Desserter"}
+        />
       </Link>
     </div>
   );
