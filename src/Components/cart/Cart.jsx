@@ -74,6 +74,16 @@ const Cart = (props) => {
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
   }
 
+  const coverStyle = {
+    backgroundColor: "#815757",
+    width: "100px",
+    height: "60px",
+    padding: "5px",
+    position: "absolute",
+    top: "-20px", 
+    left: "-0px"
+  }
+
   function confirmOrder() {
     setOrderConfirmed(true);
     const newOrderHistory = {
@@ -95,6 +105,7 @@ const Cart = (props) => {
   if (!orderConfirmed) {
     return (
       <div style={shoppingCartContainerStyle}>
+        <p style={coverStyle}></p>
         <h4>Fullfør din bestilling:</h4>
         {orders.length > 0 && <ul style={ulStyle}>{orderList}</ul>}
         {orders.length === 0 && <p>Ingen varer lagt til</p>}
@@ -111,6 +122,7 @@ const Cart = (props) => {
   } else {
     return (
       <div>
+        <p style={coverStyle}></p>
         <img src={logoImage} style={logoStyle}></img>
         <h1>Takk!</h1>
         <p>Jævlig nice at du kjøpte fra oss a dawg. Sykt smud lxm.</p>
