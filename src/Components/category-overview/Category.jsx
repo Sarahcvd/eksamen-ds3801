@@ -24,7 +24,8 @@ const Category = (props) => {
   }
 
   const categoryStyle = {
-    gridRow: "2"
+    gridRow: "2",
+    paddingBottom: "80px"
   }
 
   const coverStyle = {
