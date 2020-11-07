@@ -35,7 +35,7 @@ const Cart = (props) => {
   const checkmarkText = {
     gridColumn: "2",
     textAlign: "center",
-    paddingTop: "20px"
+    paddingTop: "50px"
   }
 
   const shoppingCartContainerStyle = {
