@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import CartSummaryBar from "./CartSummaryBar";
 import '../../styles2.css'
@@ -6,9 +7,10 @@ import '../../styles2.css'
 const Category = (props) => {
   const categoryLiContainerStyle = {
     margin: "auto",
-    padding: "5px",
-    gridColumn: "1 /span 3",
+    gridRow: "2",
+    gridColumn: "2 /span 6",
     display: "grid",
+    gridTemplateRows: "auto auto auto"
   }
 
   const categoryLiStyle = {
@@ -20,7 +22,21 @@ const Category = (props) => {
     margin: "5px",
     backgroundColor: "white",
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
-    
+  }
+
+  const categoryStyle = {
+    gridRow: "2",
+    paddingBottom: "80px"
+  }
+
+  const coverStyle = {
+    backgroundColor: "#815757",
+    width: "100px",
+    height: "60px",
+    padding: "5px",
+    position: "absolute",
+    top: "-20px", 
+    left: "-0px"
   }
 
   const listItems = props.productList.items.map((item) => (
@@ -31,13 +47,14 @@ const Category = (props) => {
   ));
 
   return (
-  <div>
-    <ul className="product-list" style={categoryLiContainerStyle}>
-      {listItems}
-    </ul>
-    <CartSummaryBar />
-  </div>
-    );
+    <div style={categoryStyle}>
+      <p style={coverStyle}></p>
+      <ul className="product-list" style={categoryLiContainerStyle}>
+        {listItems}
+      </ul>
+      <CartSummaryBar />
+    </div>
+  );
 };
 
 //Export module

@@ -9,10 +9,27 @@ const OrderHistory = (props) => {
 
   console.log(orderHistory);
   const orderListStyle = {
-    width: "50px", 
-    height: "50px",
-    backgroundColor: "black", 
+    listStyleType: "none",
+    margin: "auto", 
+    boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
+    padding: "0px 5px"
   }
+
+  const containerStyle = {
+    gridColumn: "1 /span 3",
+    margin: "10px"
+  }
+
+  const coverStyle = {
+    backgroundColor: "#815757",
+    width: "100px",
+    height: "60px",
+    padding: "5px",
+    position: "absolute",
+    top: "-20px", 
+    left: "-0px"
+  }
+  
   const orderHistoryList = orderHistory.map((order) => (
     <li 
       style={orderListStyle}
@@ -20,7 +37,8 @@ const OrderHistory = (props) => {
   ));
 
   return (
-    <div>
+    <div style={containerStyle}>
+      <p style={coverStyle}></p>
       {orderHistoryList}
       <Link to={"/"}>
         <button>forsiden</button>

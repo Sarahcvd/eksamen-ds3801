@@ -5,4 +5,5 @@ export default class Order {
     price;
     type;
     id;
+    img;
   }

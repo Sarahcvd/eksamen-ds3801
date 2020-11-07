@@ -10,18 +10,17 @@ const Home = (props) => {
   const menuContainerStyle = {
     margin: "auto",
     gridRow: "2",
-    gridColumn: "1 /span 2",
+    gridColumn: "1 /span 3",
     display: "grid",
     gridTemplateRows: "auto auto auto"
   }
   const imageLinkStyle = {
     maxWidth: "100%",
+    width:"360px",
+    height:"auto",
     borderRadius: "15px",
     padding: "5px",
-    margin: "10px",
-    cursor: "pointer",
     transition: "0.4s",
-    width: "375px",
     gridColumn: "1 /span 3"
   };
 
@@ -31,7 +30,8 @@ const Home = (props) => {
     fontSize: "x-large",
     fontWeight: "bold",
     position: "absolute",
-    padding: "25px"
+    padding: "25px",
+    fontFamily: "Roboto",
   }
 
   //useState and props products/setProducts
@@ -41,10 +41,10 @@ const Home = (props) => {
       style={menuContainerStyle}
     >
       <Link to={"/HotDrinks/"} id="hot-drink-container">
-        <p
+        <p className="titlestyle"
           id="hot-drinks-title"
           style={titleStyle}
-          >Varme Drikker</p>
+          >Varme drikker</p>
         <img className="hot-drinks-image"
           style={imageLinkStyle}
           src={varmeDrikkerImage}
@@ -52,10 +52,10 @@ const Home = (props) => {
         />
       </Link>
       <Link to={"/ColdDrinks/"} id="cold-drink-container">
-        <p
+        <p className="titlestyle"
           id="cold-drinks-title"
           style={titleStyle}
-        >Kalde Drikker</p>
+        >Kalde drikker</p>
         <img className="cold-drinks-image"
           style={imageLinkStyle}
           src={kaldeDrikkerImage}
@@ -63,7 +63,7 @@ const Home = (props) => {
         />
       </Link>
       <Link to={"/Desserts/"} id="dessert-container">
-        <p 
+        <p className="titlestyle"
           id="desserts-title"
           style={titleStyle}
         >Desserter</p>

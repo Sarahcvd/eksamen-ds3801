@@ -15,7 +15,6 @@ const OrderCard = (props) => {
       price: props.data.price,
       name: props.data.name,
       id: props.data.id,
-      img: props.data.img
     };
 
     updateContext(newOrder);
@@ -29,7 +28,6 @@ const OrderCard = (props) => {
       price: props.data.price,
       name: props.data.name,
       id: props.data.id,
-      img: props.data.img
     };
 
     updateContext(newOrder);
@@ -42,7 +40,7 @@ const OrderCard = (props) => {
       if (
         order.size === props.data.size &&
         order.id === props.data.id &&
-        order.type === props.data.type
+        order.type === props.data.type 
       ) {
         newOrderList.push(newOrder);
       } else {
@@ -97,10 +95,6 @@ const OrderCard = (props) => {
     borderRadius: "5px"
   }
 
-  const imgStyle = {
-    gridColumn: "1",
-    gridRow: "1 /span 2"
-  }
 
   return (
     <div style={cardContainer}>

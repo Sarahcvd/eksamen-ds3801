@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./app";
+import './fonts/Roboto-Thin.ttf'
 
 ReactDOM.render(
   <React.StrictMode>

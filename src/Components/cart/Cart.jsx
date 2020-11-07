@@ -40,8 +40,7 @@ const Cart = (props) => {
 
   const shoppingCartContainerStyle = {
     margin: "auto",
-    width: "100%", 
-    gridColumn: "1 /span 2", 
+    gridColumn: "1 /span 3", 
     padding: "10px"
   }
 
@@ -59,7 +58,8 @@ const Cart = (props) => {
     margin: "0"
   }
   const priceStyle = {
-    margin: "auto"
+    margin: "auto", 
+    borderBottom: "1px solid grey"
   }
 
   const payStyle = {
@@ -81,6 +81,7 @@ const Cart = (props) => {
     borderRadius: "5px",
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
   }
+
 
   const orderFinishedStyle = {
     margin: "auto",
@@ -110,6 +111,16 @@ const Cart = (props) => {
     textDecoration: "none",
   }
 
+  const coverStyle = {
+    backgroundColor: "#815757",
+    width: "100px",
+    height: "60px",
+    padding: "5px",
+    position: "absolute",
+    top: "-20px", 
+    left: "-0px"
+  }
+
 
   function confirmOrder() {
     setOrderConfirmed(true);
@@ -132,6 +143,7 @@ const Cart = (props) => {
   if (!orderConfirmed) {
     return (
       <div style={shoppingCartContainerStyle}>
+        <p style={coverStyle}></p>
         <h4>Fullfør din bestilling:</h4>
         {orders.length > 0 && <ul style={ulStyle}>{orderList}</ul>}
         {orders.length === 0 && <p>Ingen varer lagt til</p>}
@@ -140,14 +152,15 @@ const Cart = (props) => {
           selectedLocation={selectedLocation}
           setSelectedLocation={setSelectedLocation}
         />
-        <p style= {priceStyle}>{`Totalpris: ${getTotalPrice()}`}</p>
-        <div style={payStyle} onClick={confirmOrder}>Betal</div>
+        <p style= {priceStyle}>{`Totalpris: ${getTotalPrice()}`}</p><br/>
+        <div style={payStyle} onClick={confirmOrder}>Betal</div><br/>
         <div style={payVippsStyle}>Betal med Vipps</div>
       </div>
     );
   } else {
     return (
       <div style={orderFinishedStyle}>
+        <p style={coverStyle}></p>
         <img src={logoImage} style={logoStyle}></img> 
         <div style={checkmarkTextContainer}>
           <img src={checkmarkImage} style={checkmarkStyle}></img>

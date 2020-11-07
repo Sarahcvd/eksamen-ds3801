@@ -47,9 +47,9 @@ const ProductCard = (props) => {
       <img 
         style={productImgStyle}
         src={props.data.img}/>
-      <div style={productNameStyle}>{props.data.name}</div>
-      <div style={productPriceStyle}>{productPrice},-</div>
-      <img 
+      <div className="product-name-style" style={productNameStyle}>{props.data.name}</div>
+      <div className="product-price-style" style={productPriceStyle}>{productPrice},-</div>
+      <img className="product-arrow-style" 
         src={arrow}
         style={productArrowStyle}/>
     </Link>
