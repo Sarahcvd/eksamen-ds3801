@@ -21,8 +21,7 @@ const App = (props) => {
   const headerTitleStyle = {
     textAlign: "center",
     gridColumn: "2 / span 1",
-    color: "white",
-    fontSize: "30px"
+    fontSize: "30px",
     color: "#AC6E6E",
   }
 

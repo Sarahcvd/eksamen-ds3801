@@ -7,9 +7,6 @@ const OrderCard = (props) => {
   //   const [count, setCount] = useState(0);
   const { orders, setOrders } = useContext(OrderContext);
 
-  //   useEffect(() => {
-  //     setCount(props.data.count);
-  //   }, [props.data]);
 
   function increaseCount() {
     var newOrder = {
@@ -19,6 +16,7 @@ const OrderCard = (props) => {
       price: props.data.price,
       name: props.data.name,
       id: props.data.id,
+      img: props.data.img
     };
 
     updateContext(newOrder);
@@ -32,6 +30,7 @@ const OrderCard = (props) => {
       price: props.data.price,
       name: props.data.name,
       id: props.data.id,
+      img: props.data.img
     };
 
     updateContext(newOrder);
@@ -44,7 +43,8 @@ const OrderCard = (props) => {
       if (
         order.size === props.data.size &&
         order.id === props.data.id &&
-        order.type === props.data.type
+        order.type === props.data.type &&
+        order.img === props.data.img
       ) {
         newOrderList.push(newOrder);
       } else {
@@ -55,16 +55,67 @@ const OrderCard = (props) => {
     setOrders(newOrderList);
   }
 
+  const cardContainer = {
+    margin: "auto",
+    display: "grid",
+    gridTemplateColumns: "auto auto auto",
+    gridTemplateRows: "auto auto"
+  }
+
+  const buttonDivContainer = {
+    margin: "auto",
+    gridColumn: "3",
+    gridRow: "1 /span 2",
+    display: "grid",
+    gridTemplateColumns: "auto auto auto", 
+    gridGap: "5px"
+  }
+
+  const buttonStyle = {
+    height: "fit-content",
+    color: "#815757", 
+    fontWeight: "bold",
+    
+  }
+
+  const cardTextStyle = {
+    padding: "10px",
+    gridRow: "1",
+    gridColumn: "2"
+  }
+
+  const cardSizeText = {
+    padding: "10px",
+    gridRow: "2", 
+    gridColumn: "2"
+  }
+
+  const countStyle = {
+    backgroundColor: "#815757",
+    color: "white",
+    padding: "3px 10px",
+    borderRadius: "5px"
+  }
+
+  const imgStyle = {
+    gridColumn: "1",
+    gridRow: "1 /span 2"
+  }
+
   return (
-    <div id="test">
-      <div>{props.data.name}</div>
-      <div>{`${props.data.size} | kr ${
+    <div style={cardContainer}>
+      <img
+        style={imgStyle}
+        src={props.data.img}
+      />
+      <div style={cardTextStyle}>{props.data.name}</div>
+      <div style={cardSizeText}>{`${props.data.size} | kr ${
         props.data.price * props.data.count
-      };-`}</div>
-      <div>
-        <button onClick={decreaseCount}>-</button>
-        <p>{props.data.count}</p>
-        <button onClick={increaseCount}>+</button>
+      },-`}</div>
+      <div style={buttonDivContainer}>
+        <p style={buttonStyle} onClick={decreaseCount}>-</p>
+        <p style={countStyle}>{props.data.count}</p>
+        <p style={buttonStyle} onClick={increaseCount}>+</p>
       </div>
     </div>
   );

@@ -23,7 +23,8 @@ const Cart = (props) => {
   const shoppingCartContainerStyle = {
     margin: "auto",
     width: "100%", 
-    gridColumn: "1 /span 2"
+    gridColumn: "1 /span 2", 
+    
   }
 
   const orderCardStyle = {
@@ -35,8 +36,12 @@ const Cart = (props) => {
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
   }
 
+
   const orderList = orders.map((order) => (
-    <li style={orderCardStyle} key={`${order.id}-${order.size}`}>{<OrderCard data={order} />}</li>
+    <li 
+      style={orderCardStyle} 
+      key={`${order.id}-${order.size}`}
+    >{<OrderCard data={order} />}</li>
   ));
 
   return (

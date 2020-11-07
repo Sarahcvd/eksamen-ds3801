@@ -43,3 +43,8 @@ body{
 #product-count-section{
     display: grid;
 }
+
+[type=radio]:checked + img {
+    box-shadow: 0 0 0 2pt #815757;
+    padding: 3px;
+  }
