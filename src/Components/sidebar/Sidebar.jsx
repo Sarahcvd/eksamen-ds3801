@@ -16,9 +16,15 @@ const logoStyle = {
 const Sidebar = (props) => {
   return (
     <Menu>
-      <div style={sideBarStyle}> <img src={logo} style={logoStyle}/> </div>
+      <div style={sideBarStyle}> 
+        <img 
+          src={logo} 
+          style={logoStyle}
+          alt="logo"
+        /> 
+      </div>
       <a className="menu-item" href="/">
-        Home
+        Hjem
       </a>
       <a className="menu-item" href="/History">
         Ordrehistorikk

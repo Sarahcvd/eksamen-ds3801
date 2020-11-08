@@ -10,7 +10,8 @@ const Category = (props) => {
     gridColumn: "2 /span 6",
     display: "grid",
     gridTemplateRows: "auto auto auto",
-    paddingLeft:"4%"
+    paddingLeft:"7%",
+    justifyItems: "center"
   }
 
   const categoryLiStyle = {
@@ -27,7 +28,8 @@ const Category = (props) => {
 
   const categoryStyle = {
     gridRow: "2",
-    paddingBottom: "80px"
+    paddingBottom: "80px",
+    justifyItems: "center"
   }
 
   const listItems = props.productList.items.map((item) => (

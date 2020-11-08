@@ -24,18 +24,16 @@ const App = (props) => {
     width: "100%",
   }
 
-  const headerTitleStyle = {
-    textAlign: "center",
-    gridColumn: "2",
-    fontSize: "30px",
-    color: "white",
-  }
-
   const homeLinkStyle = {
     textDecoration: "none",
     margin: "auto"
   }
   
+  const logoStyle = {
+    width: "60px",
+    margin: "10px",
+  }
+
   //useState and props products/setProducts
 
   const [orders, setOrders] = useState([]);
@@ -51,11 +49,7 @@ const App = (props) => {
     setOrderHistory,
   ]);
 
-  const logoStyle = {
-    width: "60px",
-    margin: "10px",
-    
-  }
+  
 
   return (
     <Router>
@@ -63,7 +57,13 @@ const App = (props) => {
       <header style={headerStyle}>
         <Sidebar outerContainerId={'root'} />
         {/*Title*/}
-        <a href="/" style={homeLinkStyle}> <img style={logoStyle}src={logo}/></a> 
+        <a href="/" style={homeLinkStyle}> 
+          <img 
+            style={logoStyle}
+            src={logo}
+            alt="logo"
+          />
+        </a> 
       </header>
 
       {/*Switch route path*/}
