@@ -3,6 +3,7 @@ import { useParams, useHistory } from "react-router-dom";
 import { OrderContext } from "../orderContext";
 import SizeSelector from "./selectors/SizeSelector";
 import TypeSelector from "./selectors/TypeSelector";
+import '../../src/buttonActive.css'
 
 const Product = (props) => {
   //useState and props products/setProducts
@@ -34,33 +35,31 @@ const Product = (props) => {
   const productCountSectionStyle = {
     displat: "grid",
     gridTemplateRows: "auto auto",
-    margin: "auto", 
+    margin: "1px 1px 1px 1px", 
     fontSize: "xx-large",
-    padding: "5px"
+    padding: "0px"
   }
 
   const countSectionStyle = {
     display: "grid",
     gridTemplateColumns: "auto auto auto",
-    gridGap:"15px"
+    gridGap:"45px"
   }
 
   const decreaseCountStyle = {
     gridColumn: "1",
     textAlign:"center",
-    backgroundColor: "#815757",
-    borderRadius: "5px",
-    width: "25px", 
-    color: "white",
+    borderRadius: "100%",
+    width: "40px",  
     padding: "5px"
   }
 
   const countStyle = {
     gridColumn: "2",
     textAlign: "center",
-    backgroundColor: "#815757",
     borderRadius: "5px",
-    width: "25px", 
+    width: "40px",
+    backgroundColor: "#815757", 
     color: "white",
     padding: "5px"
   }
@@ -68,10 +67,8 @@ const Product = (props) => {
   const increaseCountStyle = {
     gridColumn: "3",
     textAlign: "center",
-    backgroundColor: "#815757",
-    borderRadius: "5px",
-    width: "25px", 
-    color: "white", 
+    borderRadius: "100%",
+    width: "40px", 
     padding: "5px"
   }
 
@@ -79,7 +76,7 @@ const Product = (props) => {
     gridRow: "2",
     textAlign: "center",
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
-    padding: "5px"
+    padding: "5px",
   }
 
   useEffect(() => {
@@ -162,11 +159,13 @@ const Product = (props) => {
       />
       <div style={productCountSectionStyle}>
         <div style={countSectionStyle}>
-          <p style={decreaseCountStyle} onClick={decreaseCount}>-</p>
+          <p className="countStyle" style={decreaseCountStyle} onClick={decreaseCount}>-</p>
           <p style={countStyle}>{count}</p>
-          <p style={increaseCountStyle} onClick={increaseCount}>+</p>
+          <p className="countStyle"  style={increaseCountStyle} onClick={increaseCount}>+</p>
         </div>
+
         <div className="add-button-style" style={addBtnStyle} onClick={addOrderToCart}>Legg til</div>
+
       </div>
     </div>
   );

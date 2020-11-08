@@ -18,6 +18,15 @@ div{
     font-family: Roboto;
 }
 
+
+#addBtnStyle{
+    background-color: #F7F8F7;
+}
+
+#addBtnStyle:active{
+  background-color: #815757;
+}
+
 /* MAIN CONTAINER */
 #root {
     margin: auto;
@@ -37,6 +46,7 @@ div{
     padding: 3px;
     background-color: #815757;
   }
+
 
 
 
