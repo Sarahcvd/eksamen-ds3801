@@ -12,20 +12,20 @@ const LocationSelector = (props) => {
   const locationContainerStyle = {
     margin: "auto",
     borderRadius: "5px",
-    color: "black",
+    color: "#815757",
     padding: "5px",
   }
 
   const formStyle = {
-    margin: "auto", 
+    margin: "10px", 
     width: "fit-content", 
     display: "grid",
     gridTemplateColumn: "auto auto",
-    gridGap: "5px"
+    gridGap: "35px"
   }
 
   const radio1 = {
-    gridColumn: "1"
+    gridColumn: "1",
   }
 
   const radio2 = {
@@ -39,10 +39,18 @@ const LocationSelector = (props) => {
   }
 
   const imgStyle = {
-    height: "50px",
+    height: "80px",
     borderRadius: "100%", 
     padding: "5px",
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
+  }
+
+  const seatedStyle = {
+    marginLeft:"20px"
+  }
+
+  const takeAwayStyle={
+    marginLeft:"16px"
   }
 
   return (
@@ -62,7 +70,7 @@ const LocationSelector = (props) => {
               style={imgStyle}
               alt="Sit here"
             />
-            <p>Sitt Her</p>
+            <p style={seatedStyle}>Sitt her</p>
           </label>
         </div>
         <div className="radio" style={radio2}>
@@ -79,7 +87,7 @@ const LocationSelector = (props) => {
               style={imgStyle}
               alt="take-away"
             />
-            <p>Ta Med</p>
+            <p style={takeAwayStyle}>Ta med</p>
           </label>
         </div>
       </form>
