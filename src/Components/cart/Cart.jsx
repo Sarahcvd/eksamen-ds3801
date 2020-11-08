@@ -29,13 +29,15 @@ const Cart = (props) => {
 
   const checkmarkStyle = {
     maxWidth: "100%",
-    gridColumn: "1",
+    width: "200px",
+    gridRow: "1",
   };
 
   const checkmarkText = {
-    gridColumn: "2",
+    gridRow: "2",
     textAlign: "center",
-    paddingTop: "50px"
+    paddingTop: "20px",
+    fontSize: "30px",
   }
 
   const shoppingCartContainerStyle = {
@@ -93,8 +95,9 @@ const Cart = (props) => {
 
   const checkmarkTextContainer = {
     display: "grid",
-    gridTemplateColumns: "auto auto",
-    padding: "50px 0px"
+    gridTemplateRows: "auto auto",
+    padding: "50px 0px",
+    justifyItems: "center"
   }
 
   const stylebtn = {
@@ -149,8 +152,7 @@ const Cart = (props) => {
   } else {
     return (
       <div style={orderFinishedStyle}>
-        <img className="logo-style" src={logoImage} style={logoStyle} alt="Logo"></img> 
-        <div style={checkmarkTextContainer}>
+        <div className="checkmarkTextContainer" style={checkmarkTextContainer}>
           <img className="checkmark-style" src={checkmarkImage} style={checkmarkStyle} alt="Checkmark"></img>
           <p className="checkmark-text-style" style={checkmarkText}>Takk for din bestilling</p>
         </div>
