@@ -5,6 +5,7 @@ import SizeSelector from "./selectors/SizeSelector";
 import TypeSelector from "./selectors/TypeSelector";
 import '../../src/buttonActive.css'
 
+
 const Product = (props) => {
   //useState and props products/setProducts
   const productId = useParams().productId;
@@ -42,8 +43,8 @@ const Product = (props) => {
 
   const countSectionStyle = {
     display: "grid",
-    gridTemplateColumns: "auto auto auto",
-    gridGap:"45px"
+    gridTemplateColumns: "1fr 1fr 1fr",
+    justifyItems: "center"
   }
 
   const decreaseCountStyle = {
@@ -152,11 +153,12 @@ const Product = (props) => {
           setSelectedSize={setSelectedSize}
         />
       )}
-
-      <TypeSelector
-        selectedType={selectedType}
-        setSelectedType={setSelectedType}
-      />
+      {product.canBeDouble && (
+        <TypeSelector
+          selectedType={selectedType}
+          setSelectedType={setSelectedType}
+        />
+      )}
       <div style={productCountSectionStyle}>
         <div style={countSectionStyle}>
           <p className="countStyle" style={decreaseCountStyle} onClick={decreaseCount}>-</p>

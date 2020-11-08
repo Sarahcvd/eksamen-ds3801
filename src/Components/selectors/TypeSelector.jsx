@@ -33,15 +33,16 @@ const TypeSelector = (props) => {
     <div style={gridItem}>
       <form style={formStyle}>
         <div className="radio">
-          <label>
-            <input style={simpleStyle}
+          <div>
+            <input 
+              style={simpleStyle}
               type="radio"
               value="enkel"
               checked={props.selectedType === "enkel"}
               onChange={handleTypeChange}
             />
             Enkel
-          </label>
+          </div>
         </div>
         <div className="radio">
           <label>

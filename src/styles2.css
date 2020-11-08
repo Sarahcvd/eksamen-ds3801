@@ -19,13 +19,7 @@ div{
 }
 
 
-#addBtnStyle{
-    background-color: #F7F8F7;
-}
 
-#addBtnStyle:active{
-  background-color: #815757;
-}
 
 /* MAIN CONTAINER */
 #root {
@@ -45,10 +39,15 @@ div{
     box-shadow: 0 0 0 2pt #815757;
     padding: 3px;
     background-color: #815757;
-  }
+}
 
+#addBtnStyle{
+    background-color: #F7F8F7;
+}
 
-
+#addBtnStyle:active{
+    background-color: #815757;
+}
 
 /* STYLING FOR DESKTOP */
 @media only screen and (min-width: 768px){
