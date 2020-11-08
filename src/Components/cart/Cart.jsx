@@ -132,8 +132,8 @@ const Cart = (props) => {
 
   if (!orderConfirmed) {
     return (
-      <div style={shoppingCartContainerStyle}>
-        <h4>Fullfør din bestilling:</h4>
+      <div className="shopping-cart-container-style" style={shoppingCartContainerStyle}>
+        <h4 className="order-style">Fullfør din bestilling:</h4>
         {orders.length > 0 && <ul style={ulStyle}>{orderList}</ul>}
         {orders.length === 0 && <p>Ingen varer lagt til</p>}
 
