@@ -42,8 +42,8 @@ const Product = (props) => {
 
   const countSectionStyle = {
     display: "grid",
-    gridTemplateColumns: "auto auto auto",
-    gridGap:"45px"
+    gridTemplateColumns: "1fr 1fr 1fr",
+    justifyItems: "center"
   }
 
   const decreaseCountStyle = {
