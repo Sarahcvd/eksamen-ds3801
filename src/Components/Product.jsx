@@ -5,6 +5,7 @@ import SizeSelector from "./selectors/SizeSelector";
 import TypeSelector from "./selectors/TypeSelector";
 import '../../src/buttonActive.css'
 
+
 const Product = (props) => {
   //useState and props products/setProducts
   const productId = useParams().productId;
@@ -152,11 +153,12 @@ const Product = (props) => {
           setSelectedSize={setSelectedSize}
         />
       )}
-
-      <TypeSelector
-        selectedType={selectedType}
-        setSelectedType={setSelectedType}
-      />
+      {product.canBeDouble && (
+        <TypeSelector
+          selectedType={selectedType}
+          setSelectedType={setSelectedType}
+        />
+      )}
       <div style={productCountSectionStyle}>
         <div style={countSectionStyle}>
           <p className="countStyle" style={decreaseCountStyle} onClick={decreaseCount}>-</p>
