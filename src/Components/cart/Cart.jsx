@@ -4,7 +4,6 @@ import OrderCard from "./OrderCard";
 import { OrderContext } from "../../orderContext";
 import { HistoryContext } from "../../historyContext";
 import LocationSelector from "../selectors/LocationSelector";
-import logoImage from "../../images/logo.png";
 import checkmarkImage from "../../images/checkmark.png";
 
 const Cart = (props) => {
@@ -21,11 +20,6 @@ const Cart = (props) => {
     });
     return price;
   }
-
-  const logoStyle = {
-    maxWidth: "50%",
-    margin: "auto"
-  };
 
   const checkmarkStyle = {
     maxWidth: "100%",
@@ -49,8 +43,8 @@ const Cart = (props) => {
   const orderCardStyle = {
     borderRadius: "5px",
     color: "black",
-    padding: "5px",
-    margin: "auto",
+    height: "85px",
+    margin: "15px",
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
   }
 

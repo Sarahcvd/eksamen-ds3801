@@ -170,6 +170,7 @@ div{
 
     .order-style {
         margin-right: 800px;
+        width: 400px;
     }
 
     .logo-style {
@@ -185,4 +186,36 @@ div{
         justify-items: center;
     }
 
+    .locationContainerStyle{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 400px;
+        grid-column-gap: 200px;    
+    }
+
+    
+
+    #seatedStyle{
+        grid-column: 1;
+    }
+
+    #takeAwayStyle{
+        grid-column: 2;
+    }
+
+    #card-container{
+        position: relative;
+    }
+
+    #card-text-style{
+        position: absolute;
+        left: -150px;
+    }
+
+    #card-size-text{
+        position: absolute;
+        left: -150px;
+    }
+    
+    
   }

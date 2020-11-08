@@ -54,7 +54,7 @@ const LocationSelector = (props) => {
   }
 
   return (
-    <div style={locationContainerStyle}>
+    <div className="locationContainerStyle"style={locationContainerStyle}>
       <form style={formStyle}>
         <div className="radio" style={radio1}>
           <label>
@@ -70,7 +70,7 @@ const LocationSelector = (props) => {
               style={imgStyle}
               alt="Sit here"
             />
-            <p style={seatedStyle}>Sitt her</p>
+            <p id="seatedStyle"style={seatedStyle}>Sitt her</p>
           </label>
         </div>
         <div className="radio" style={radio2}>
@@ -87,7 +87,7 @@ const LocationSelector = (props) => {
               style={imgStyle}
               alt="take-away"
             />
-            <p style={takeAwayStyle}>Ta med</p>
+            <p id="takeAwayStyle"style={takeAwayStyle}>Ta med</p>
           </label>
         </div>
       </form>

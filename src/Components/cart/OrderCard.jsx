@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { OrderContext } from "../../orderContext";
+import "../../styles2.css"
 
 const OrderCard = (props) => {
   //useState and props products/setProducts
@@ -96,13 +97,13 @@ const OrderCard = (props) => {
 
 
   return (
-    <div style={cardContainer}>
-      <div style={cardTextStyle}>{props.data.name}</div>
-      <div style={cardSizeText}>{`${props.data.size} | kr ${
+    <div id="card-container" style={cardContainer}>
+      <div id="card-text-style" style={cardTextStyle}>{props.data.name}</div>
+      <div id="card-size-text" style={cardSizeText}>{`${props.data.size} | kr ${
         props.data.price * props.data.count
       },-`}</div>
       <div style={buttonDivContainer}>
-        <p style={buttonStyle} onClick={decreaseCount}>-</p>
+        <p className="button-style" style={buttonStyle} onClick={decreaseCount}>-</p>
         <p style={countStyle}>{props.data.count}</p>
         <p style={buttonStyle} onClick={increaseCount}>+</p>
       </div>
