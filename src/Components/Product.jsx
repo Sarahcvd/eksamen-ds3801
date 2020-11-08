@@ -3,7 +3,7 @@ import { useParams, useHistory } from "react-router-dom";
 import { OrderContext } from "../orderContext";
 import SizeSelector from "./selectors/SizeSelector";
 import TypeSelector from "./selectors/TypeSelector";
-import '../../src/buttonActive.css'
+import '../../src/styles2.css'
 
 
 const Product = (props) => {
@@ -38,7 +38,8 @@ const Product = (props) => {
     gridTemplateRows: "auto auto",
     margin: "1px 1px 1px 1px", 
     fontSize: "xx-large",
-    padding: "0px"
+    padding: "0px",
+    marginBottom: "20px"
   }
 
   const countSectionStyle = {
@@ -78,6 +79,7 @@ const Product = (props) => {
     textAlign: "center",
     boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
     padding: "5px",
+    marginBottom: "10px"
   }
 
   useEffect(() => {
@@ -161,11 +163,10 @@ const Product = (props) => {
       )}
       <div style={productCountSectionStyle}>
         <div style={countSectionStyle}>
-          <p className="countStyle" style={decreaseCountStyle} onClick={decreaseCount}>-</p>
+          <p className="count-style" style={decreaseCountStyle} onClick={decreaseCount}>-</p>
           <p style={countStyle}>{count}</p>
-          <p className="countStyle"  style={increaseCountStyle} onClick={increaseCount}>+</p>
+          <p className="count-style" style={increaseCountStyle} onClick={increaseCount}>+</p>
         </div>
-
         <div className="add-button-style" style={addBtnStyle} onClick={addOrderToCart}>Legg til</div>
 
       </div>

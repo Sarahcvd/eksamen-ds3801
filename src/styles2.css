@@ -19,8 +19,6 @@ div{
 }
 
 
-
-
 /* MAIN CONTAINER */
 #root {
     margin: auto;
@@ -32,7 +30,6 @@ div{
 }
 
 
-
 /* PRODUCT CARD */
 
 [type=radio]:checked + img {
@@ -41,13 +38,33 @@ div{
     background-color: #815757;
 }
 
-#addBtnStyle{
-    background-color: #F7F8F7;
+
+.add-button-style{
+    background-color: #815757;
+    transition: 200ms ease;
+    color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 1px solid #815757;
 }
 
-#addBtnStyle:active{
-    background-color: #815757;
+.add-button-style:active{
+  background-color: white;
+  color: #815757;
+  border-color: #815757;
 }
+
+.count-style {
+    background-color: #815757;
+    color: white;
+    border: 1px solid #815757;
+}
+
+.count-style:active{
+    background-color: white;
+    color: #815757;
+}
+
 
 /* STYLING FOR DESKTOP */
 @media only screen and (min-width: 768px){

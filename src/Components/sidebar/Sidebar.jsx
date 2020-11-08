@@ -8,7 +8,7 @@ const Sidebar = (props) => {
         Home
       </a>
       <a className="menu-item" href="/History">
-        Tidligere-bestillinger
+        Ordrehistorikk
       </a>
       <a className="menu-item" href="/">
         Ansatt
