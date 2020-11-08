@@ -1,4 +1,4 @@
-#addBtnStyle{
+.add-button-style{
     background-color: #815757;
     transition: 200ms ease;
     color: white;
@@ -6,7 +6,7 @@
     margin-top: 10px;
 }
 
-#addBtnStyle:active{
+.add-button-style:active{
   background-color: white;
   color: #815757;
   border-color: #815757;
