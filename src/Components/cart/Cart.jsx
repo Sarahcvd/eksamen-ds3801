@@ -149,10 +149,10 @@ const Cart = (props) => {
   } else {
     return (
       <div style={orderFinishedStyle}>
-        <img src={logoImage} style={logoStyle} alt="Logo"></img> 
+        <img className="logo-style" src={logoImage} style={logoStyle} alt="Logo"></img> 
         <div style={checkmarkTextContainer}>
-          <img src={checkmarkImage} style={checkmarkStyle} alt="Checkmark"></img>
-          <p style={checkmarkText}>Takk for din bestilling</p>
+          <img className="checkmark-style" src={checkmarkImage} style={checkmarkStyle} alt="Checkmark"></img>
+          <p className="checkmark-text-style" style={checkmarkText}>Takk for din bestilling</p>
         </div>
         <Link to={"/"} style={linkstyle}>
           <p style={stylebtn}>Tilbake til forsiden</p>

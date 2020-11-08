@@ -172,5 +172,20 @@ div{
         margin-right: 800px;
     }
 
+    .logo-style {
+        width: 20%;
+        margin-left: 50px;
+    }
+
+    .checkmark-style {
+        width: 15%;
+        margin-left: 300px;
+        margin-top: 40px;
+    }
+
+    .checkmark-text-style {
+        margin-right: 400px;
+    }
+
 
   }
