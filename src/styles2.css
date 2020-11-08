@@ -124,6 +124,46 @@ div{
         grid-template-columns: auto auto auto;
     }
 
+    #test {
+        grid-column: 2;
+        grid-row: 4 / 6 span;
+        display: grid;
+        grid-gap: 15px;    
+    }
+
+    .image-style {
+        max-width: 100%;
+        width: 200px;
+        margin: auto;
+        grid-column: 2 / span 40;
+        grid-row: 1 / span 5;
+    }
+
+    .add-btn-style {
+        display: grid;
+        grid-row: 2 / span 6;
+        grid-column: 1 /span 6;
+        text-align: center;
+        box-shadow: 3px 3px 20px -3px rgba(0, 0, 0, 0.5);
+        padding: 5px;
+    }
+
+    .pay-style {
+        background-color: black; 
+        color: white; 
+        width: 100%; 
+        text-align: center; 
+        padding: 10px 0px; 
+        border-radius: 5px;
+        box-shadow: 3px 3px 20px -3px rgba(0, 0, 0, 0.5);
+        grid-column: 2 / span 4;
+        grid-row: 1 / span 3;
+    }
+
+    .pay-vipps-style {
+    display: none;
+    }
+
 
 
 
