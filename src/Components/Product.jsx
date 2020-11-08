@@ -146,7 +146,7 @@ const Product = (props) => {
   return (
     <div id="test" style={productContainerStyle}>
       <p style={gridItem}>{product.name}</p>
-      <img src={product.img} style={imageStyle} alt={product.img}></img>
+      <img className="image-style" src={product.img} style={imageStyle} alt={product.img}></img>
       <p style={gridItem}>kr {getCorrectPrice()},-</p>
 
       {useSizes && (
@@ -166,7 +166,7 @@ const Product = (props) => {
           <p style={countStyle}>{count}</p>
           <p style={increaseCountStyle} onClick={increaseCount}>+</p>
         </div>
-        <div style={addBtnStyle} onClick={addOrderToCart}>Legg til</div>
+        <div className="add-button-style" style={addBtnStyle} onClick={addOrderToCart}>Legg til</div>
       </div>
     </div>
   );

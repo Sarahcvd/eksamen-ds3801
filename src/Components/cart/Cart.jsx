@@ -142,8 +142,8 @@ const Cart = (props) => {
           setSelectedLocation={setSelectedLocation}
         />
         <p style= {priceStyle}>{`Totalpris: ${getTotalPrice()}`}</p><br/>
-        <div style={payStyle} onClick={confirmOrder}>Betal</div><br/>
-        <div style={payVippsStyle}>Betal med Vipps</div>
+        <div className="pay-style" style={payStyle} onClick={confirmOrder}>Betal</div><br/>
+        <div className="pay-vipps-style" style={payVippsStyle}>Betal med Vipps</div>
       </div>
     );
   } else {
