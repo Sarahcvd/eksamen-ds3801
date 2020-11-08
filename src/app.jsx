@@ -10,6 +10,7 @@ import { OrderContext } from "./orderContext";
 import { HistoryContext } from "./historyContext";
 import Sidebar from "./Components/sidebar/Sidebar";
 import "./Sidebar.css";
+import logo from '../src/images/logo.png';
 
 const App = (props) => {
   const headerStyle = {
@@ -20,7 +21,7 @@ const App = (props) => {
     gridTemplateColumns: "1fr 1fr 1fr",
     fontWeight: "bold",
     backgroundColor: "#815757", 
-    width: "100%"
+    width: "100%",
   }
 
   const headerTitleStyle = {
@@ -31,7 +32,8 @@ const App = (props) => {
   }
 
   const homeLinkStyle = {
-    textDecoration: "none",     
+    textDecoration: "none",
+    margin: "auto"
   }
   
   //useState and props products/setProducts
@@ -49,13 +51,19 @@ const App = (props) => {
     setOrderHistory,
   ]);
 
+  const logoStyle = {
+    width: "60px",
+    margin: "10px",
+    
+  }
+
   return (
     <Router>
       {/*accepts values to be passed to ShoppingCart*/}
       <header style={headerStyle}>
         <Sidebar outerContainerId={'root'} />
         {/*Title*/}
-        <a href="/" style={homeLinkStyle}> <h1 style={headerTitleStyle}>leCafé </h1></a> 
+        <a href="/" style={homeLinkStyle}> <img style={logoStyle}src={logo}/></a> 
       </header>
 
       {/*Switch route path*/}
