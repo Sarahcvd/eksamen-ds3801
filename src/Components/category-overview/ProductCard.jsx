@@ -46,31 +46,29 @@ const ProductCard = (props) => {
       setProductPrice(props.data.price);
     }
   }, [props.data]);
-
-  function handleClick() {
-    window.location.href += `/${props.data.id}`;
-  }
-
   
 
   return (
     <Link to={`${props.data.id}/`} style={productOutputCard}>
       <img 
         style={productImgStyle}
-        src={props.data.img}/>
-        <div 
-          className="product-name-style" 
-          style={productNameStyle}>{props.data.name}
-        </div>
-        <div 
-          className="product-price-style" 
-          style={productPriceStyle}>{productPrice},-
-        </div>
-        <img 
-          className="product-arrow-style" 
-          src={arrow}
-          style={productArrowStyle}
-        />
+        src={props.data.img}
+        alt={props.data.name}
+      />
+      <div 
+        className="product-name-style" 
+        style={productNameStyle}>{props.data.name}
+      </div>
+      <div 
+        className="product-price-style" 
+        style={productPriceStyle}>{productPrice},-
+      </div>
+      <img 
+        className="product-arrow-style" 
+        src={arrow}
+        style={productArrowStyle}
+        alt="next-arrow"
+      />
     </Link>
   );
 };

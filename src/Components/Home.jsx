@@ -1,5 +1,5 @@
-import React, { useState, useStyles } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import varmeDrikkerImage from "../images/varmeDrikker.jpg";
 import kaldeDrikkerImage from "../images/kaldeDrikker.jpg";
 import dessertImage from "../images/desserter.jpeg";

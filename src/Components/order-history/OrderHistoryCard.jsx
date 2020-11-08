@@ -16,7 +16,9 @@ const OrderHistoryCard = (props) => {
   const dateStyle = {
     color: "grey",
     overflow: "hidden",
-    height: "25px"
+    height: "25px",
+    width: "300px",
+
   }
 
   const cardContainer = {

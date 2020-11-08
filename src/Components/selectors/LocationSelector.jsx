@@ -14,7 +14,6 @@ const LocationSelector = (props) => {
     borderRadius: "5px",
     color: "black",
     padding: "5px",
-
   }
 
   const formStyle = {
@@ -61,6 +60,7 @@ const LocationSelector = (props) => {
             <img 
               src={sitteHer}
               style={imgStyle}
+              alt="Sit here"
             />
             <p>Sitt Her</p>
           </label>
@@ -77,6 +77,7 @@ const LocationSelector = (props) => {
             <img 
               src={taMed}
               style={imgStyle}
+              alt="take-away"
             />
             <p>Ta Med</p>
           </label>

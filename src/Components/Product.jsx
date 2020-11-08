@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams, useHistory, Link } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { OrderContext } from "../orderContext";
 import SizeSelector from "./selectors/SizeSelector";
 import TypeSelector from "./selectors/TypeSelector";
@@ -30,16 +30,6 @@ const Product = (props) => {
     width: "200px",
     margin: "auto"
   };
-
-  const coverStyle = {
-    backgroundColor: "#815757",
-    width: "100px",
-    height: "60px",
-    padding: "5px",
-    position: "absolute",
-    top: "-20px", 
-    left: "-0px"
-  }
 
   const productCountSectionStyle = {
     displat: "grid",
@@ -155,9 +145,8 @@ const Product = (props) => {
 
   return (
     <div id="test" style={productContainerStyle}>
-      <p style={coverStyle}></p>
       <p style={gridItem}>{product.name}</p>
-      <img src={product.img} style={imageStyle}></img>
+      <img src={product.img} style={imageStyle} alt={product.img}></img>
       <p style={gridItem}>kr {getCorrectPrice()},-</p>
 
       {useSizes && (

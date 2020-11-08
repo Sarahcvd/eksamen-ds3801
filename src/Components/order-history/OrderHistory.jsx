@@ -8,6 +8,7 @@ const OrderHistory = (props) => {
   const { orderHistory } = useContext(HistoryContext);
 
   console.log(orderHistory);
+  
   const orderListStyle = {
     listStyleType: "none",
     margin: "auto", 
@@ -19,16 +20,6 @@ const OrderHistory = (props) => {
     gridColumn: "1 /span 3",
     margin: "10px"
   }
-
-  const coverStyle = {
-    backgroundColor: "#815757",
-    width: "100px",
-    height: "60px",
-    padding: "5px",
-    position: "absolute",
-    top: "-20px", 
-    left: "-0px"
-  }
   
   const orderHistoryList = orderHistory.map((order) => (
     <li 
@@ -38,7 +29,6 @@ const OrderHistory = (props) => {
 
   return (
     <div style={containerStyle}>
-      <p style={coverStyle}></p>
       {orderHistoryList}
       <Link to={"/"}>
         <button>forsiden</button>

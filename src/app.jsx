@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import Category from "./Components/category-overview/Category";
 import Product from "./Components/Product";
@@ -8,6 +8,8 @@ import OrderHistory from "./Components/order-history/OrderHistory";
 import { hotDrinks, coldDrinks, desserts } from "./productList";
 import { OrderContext } from "./orderContext";
 import { HistoryContext } from "./historyContext";
+import Sidebar from "./Components/sidebar/Sidebar";
+import "./Sidebar.css";
 
 const App = (props) => {
   const headerStyle = {
@@ -31,22 +33,7 @@ const App = (props) => {
   const homeLinkStyle = {
     textDecoration: "none",     
   }
-
-  const orderLinkStyle = {
-    gridColumn: "1",
-    textDecoration: "none", 
-    fontSize: "small",
-    overflow: "auto",
-    width:"70px",
-    color:"white",
-    boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
-    padding: "5px",
-    textAlign: "center"
-  }
-
-  const width = {
-    width: "80px"
-  }
+  
   //useState and props products/setProducts
 
   const [orders, setOrders] = useState([]);
@@ -66,9 +53,7 @@ const App = (props) => {
     <Router>
       {/*accepts values to be passed to ShoppingCart*/}
       <header style={headerStyle}>
-        <Link to={"/History"} style={width}>
-          <p style={orderLinkStyle}>Tidligere bestillinger</p>
-        </Link>
+        <Sidebar outerContainerId={'root'} />
         {/*Title*/}
         <a href="/" style={homeLinkStyle}> <h1 style={headerTitleStyle}>leCafé </h1></a> 
       </header>

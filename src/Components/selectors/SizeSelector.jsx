@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React from "react";
 
 const SizeSelector = (props) => {
   //useState and props products/setProducts

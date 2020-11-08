@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
 import { OrderContext } from "../../orderContext";
 
 const OrderCard = (props) => {
@@ -72,7 +72,6 @@ const OrderCard = (props) => {
     color: "#815757", 
     fontWeight: "bold",
     width: "15px"
-    
   }
 
   const cardTextStyle = {

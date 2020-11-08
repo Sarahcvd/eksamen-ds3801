@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import CartSummaryBar from "./CartSummaryBar";
 import '../../styles2.css'
@@ -30,16 +29,6 @@ const Category = (props) => {
     paddingBottom: "80px"
   }
 
-  const coverStyle = {
-    backgroundColor: "#815757",
-    width: "100px",
-    height: "60px",
-    padding: "5px",
-    position: "absolute",
-    top: "-20px", 
-    left: "-0px"
-  }
-
   const listItems = props.productList.items.map((item) => (
     <li 
       style={categoryLiStyle}
@@ -49,7 +38,6 @@ const Category = (props) => {
 
   return (
     <div style={categoryStyle}>
-      <p style={coverStyle}></p>
       <ul className="product-list" style={categoryLiContainerStyle}>
         {listItems}
       </ul>
