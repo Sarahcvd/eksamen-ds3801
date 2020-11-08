@@ -5,9 +5,9 @@ import arrow from "../../images/arrow.png";
 
 const ProductCard = (props) => {
   const productImgStyle = {
-    height: "80px",
+    height: "90px",
     position: "absolute",
-    top: "10px"
+    top: "0px",
   }
 
   const productNameStyle = {
