@@ -6,11 +6,18 @@ const SizeSelector = (props) => {
   const gridItem = {
     margin: "auto",
     padding: "15px",
-    boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)"
+    boxShadow: "3px 3px 20px -3px rgba(0, 0, 0, 0.5)",
+    width: "200px",
+    borderRadius: "10px",
+    fontSize: "30px"
   }
 
   function handleSizeChange(changeEvent) {
     props.setSelectedSize(changeEvent.target.value);
+  }
+
+  const mediumStyle = {
+    margin: "15px",
   }
 
   return (
@@ -18,7 +25,7 @@ const SizeSelector = (props) => {
       <form>
         <div className="radio">
           <label>
-            <input
+            <input style={mediumStyle}
               type="radio"
               value="liten"
               checked={props.selectedSize === "liten"}
@@ -29,7 +36,7 @@ const SizeSelector = (props) => {
         </div>
         <div className="radio">
           <label>
-            <input
+            <input style={mediumStyle}
               type="radio"
               value="medium"
               checked={props.selectedSize === "medium"}
@@ -40,7 +47,7 @@ const SizeSelector = (props) => {
         </div>
         <div className="radio">
           <label>
-            <input
+            <input style={mediumStyle}
               type="radio"
               value="stor"
               checked={props.selectedSize === "stor"}

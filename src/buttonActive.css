@@ -1,0 +1,23 @@
+#addBtnStyle{
+    background-color: #815757;
+    transition: 200ms ease;
+    color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#addBtnStyle:active{
+  background-color: white;
+  color: #815757;
+  border-color: #815757;
+}
+
+.countStyle{
+    background-color: #815757;
+    color: white;
+}
+
+.countStyle:active{
+    background-color: white;
+    color: #815757;
+}
