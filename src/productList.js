@@ -121,7 +121,7 @@ const hotDrinks = {
     },
     {
       id: 6,
-      name: "Caramel Macchiato",
+      name: "Macchiato",
       size: [
         {
           price: 45,

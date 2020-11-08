@@ -6,35 +6,37 @@ import arrow from "../../images/arrow.png";
 const ProductCard = (props) => {
   const productImgStyle = {
     height: "80px",
-    gridColumn: "1",
-    padding: "0px"
+    position: "absolute",
+    top: "10px"
   }
 
   const productNameStyle = {
-    gridColumn: "2",
     paddingTop: "35px",
-    fontSize: "20px"
+    fontSize: "20px",
+    position:"absolute",
+    left: "90px",
+    width: "120px"
   }
 
   const productPriceStyle = {
-    gridColumn: "3",
     paddingTop: "35px",
-    fontSize: "20px"
+    fontSize: "20px",
+    position: "absolute",
+    left: "230px"
   }
 
   const productArrowStyle = {
     height: "25px",
-    padding: "35px 10px 35px 0px"
+    paddingTop: "35px",
+    position: "absolute",
+    left: "290px"
   }
 
   const productOutputCard = {
     textDecoration: "none",
     color: "black",
-    display: "grid",
-    gridTemplateColumns: "auto auto auto auto",
-    height: "100px",
-    textAlign: "left",
-    gridGap: "5px"
+    display: "inline",
+    position: "relative",
   }
   //useState and props products/setProducts
   const [productPrice, setProductPrice] = useState(0);
